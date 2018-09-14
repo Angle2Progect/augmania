@@ -1,15 +1,17 @@
-$(document).ready(function(){
-	$('.question').tooltip();
-	$('.modal').modal();
-	$('.top-search__input input').keyup(function(e) {		
-		if($(this).val().length){			
-			$(this).closest('.top-search__input').find('.clear').fadeIn(100);
-		}else{
-			$(this).closest('.top-search__input').find('.clear').fadeOut(100);
-		}
-	});
-	$('.top-search__input .clear').click(function(e) {		
-		$(this).closest('.top-search__input').find('input').val('').focus();
-		$(this).fadeOut(100);
-	});
+$(document).ready(function() {
+  $('.question').tooltip();
+  $('.modal').modal();
+  $('.top-search__input input').keyup(function(e) {
+    if ($(this).val().length) {
+      $(this)
+        .closest('.top-search__input')
+        .find('.clear')
+        .fadeIn(100);
+    } else {
+      $(this)
+        .closest('.top-search__input')
+        .find('.clear')
+        .fadeOut(100);
+    }
+  });
 });

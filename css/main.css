@@ -32,20 +32,10 @@ body {
 .justify-content-between {
   justify-content: space-between;
 }
-button {
-  padding: 0;
-  background: transparent;
-  box-shadow: none;
-  border: none;
-  font-family: inherit;
-  transition: all 0.3s ease;
+.align-items-center {
+  align-items: center;
 }
-button:hover,
-button:focus,
-button:active {
-  cursor: pointer;
-  background: transparent;
-}
+
 td,
 th {
   padding: 8px 0;
@@ -206,7 +196,7 @@ th {
   fill: #8191ac;
 }
 .icon-show {
-  width: 1.45em;
+  width: 1em;
   height: 1em;
   fill: #cacfd7;
 }
@@ -229,6 +219,16 @@ th {
 .icon-video {
   width: 1.5em;
 }
+.icon-googleplus {
+  fill: #fff;
+  width: 1em;
+  height: 1em;
+}
+.icon-facebook {
+  fill: #fff;
+  width: 0.5625em;
+  height: 1em;
+}
 /* active states of icons */
 .icon-notification:focus,
 .icon-help:focus {
@@ -239,6 +239,7 @@ th {
 .icon-down:hover {
   fill: #fff;
 }
+
 /*==========================================================================
    Helper classes
    ========================================================================== */
@@ -328,6 +329,20 @@ h1 {
 a {
   transition: all 0.3s ease;
 }
+button {
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+button:hover,
+button:focus,
+button:active {
+  cursor: pointer;
+  background: transparent;
+}
 
 .button {
   display: flex;
@@ -362,8 +377,41 @@ a {
   color: #08a896;
   border-color: #08a896;
 }
+.button--signin {
+  height: 40px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 20px;
+  color: #ffffff;
+  text-transform: none;
+  font-size: 14px;
+  font-weight: normal;
+  width: 100%;
+  max-width: 224px !important;
+}
+.button--signin svg {
+  margin-right: 16px;
+}
+.button--coolblue {
+  background-color: #507cc0;
+}
+.button--coolblue:hover {
+  background-color: hsl(216, 47%, 48%);
+}
+.button--palered {
+  background-color: #df4930;
+}
+.button--palered:hover {
+  background-color: hsl(9, 73%, 47%);
+}
 p {
   margin: 0;
+}
+.redtext {
+  color: #ff4362;
+}
+.redtext:hover {
+  color: #6228ff;
 }
 .scroll-y {
   overflow-y: auto;
@@ -397,7 +445,14 @@ p {
 /* ==========================================================================
    Layout classes
    ========================================================================== */
-
+.no-sidebar .main,
+.no-sidebar .footer {
+  margin-left: 0;
+}
+.no-sidebar .main {
+  padding-left: 0;
+  padding-right: 0;
+}
 /* Sidebar */
 aside.sidebar {
   position: fixed;
@@ -856,10 +911,41 @@ footer a:hover {
 
 /* SIGNUP */
 .signup {
+  position: relative;
+  display: flex;
+  padding: 0 52px 8px 52px;
+  overflow-x: hidden;
   color: #0d0d0d;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 580px) {
+  .signup {
+    position: relative;
+    display: flex;
+    padding: 0 32px 8px 32px;
+  }
+}
+.signup__bg-img {
+  position: absolute;
+  top: 32px;
+  right: -3vw;
+  z-index: 0;
+  max-height: calc(100vh - 66px);
+}
+.signup__contr {
+  max-width: 480px;
+  width: 100%;
+  z-index: 1;
+}
+@media only screen and (min-width: 1180px) {
+  .signup {
+    justify-content: center;
+  }
+  .signup__contr {
+    margin-left: -580px;
+  }
 }
 .signup__form {
-  max-width: 480px;
   width: 100%;
   margin-top: 48px;
   padding: 32px 32px 46px 32px;
@@ -870,6 +956,11 @@ footer a:hover {
 .signup__form-header {
   text-align: center;
 }
+.signup__form-inner {
+  max-width: 360px;
+  margin: 0 auto;
+}
+
 .signup__form-title {
   font-family: 'Poppins', sans-serif;
   font-size: 24px;
@@ -887,15 +978,39 @@ footer a:hover {
   margin-top: 24px;
   margin-bottom: 24px;
 }
+.signup .input-field .icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 16px;
+}
+.signup .input-field .icon > .icon {
+  position: static;
+  right: 0;
+}
+.icon-show:hover {
+  fill: #8191ac;
+}
+
 .signup input {
-  height: 56px;
+  position: relative;
+  height: 56px !important;
   margin: 0 !important;
-  padding: 10px 16px !important;
+  padding: 10px 40px 10px 16px !important;
   border-radius: 3px !important;
   background-color: #ffffff;
   border: solid 1px #cacfd7 !important;
   box-sizing: border-box !important;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: 96% 55%;
 }
+.signup input:hover,
+.signup input:focus {
+  border-color: #8191ac !important;
+}
+
 .signup .input-field label {
   font-size: 14px;
   font-weight: normal;
@@ -915,13 +1030,43 @@ footer a:hover {
 }
 /* valid color */
 .signup .input-field input.valid {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000;
+  border-color: #09baa6 !important;
+  color: #08a896;
+  box-shadow: none;
+}
+.signup .input-field input.valid:not([type='password']) {
+  background-image: url(../img/success.svg);
 }
 /* invalid color */
 .signup .input-field input.invalid {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000;
+  border-color: #fa332e !important;
+  box-shadow: none;
+  color: #fa332e;
+}
+.signup .input-field input.invalid:not([type='password']) {
+  background-image: url(../img/error.svg);
+}
+.signup .input-field input[type='password'] {
+  background-image: url(../img/show.svg);
+}
+.input-field input.invalid + .helper-text {
+  display: block;
+}
+
+.input-field .helper-text {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+  line-height: normal;
+  display: none;
+  text-align: center;
+}
+.input-field .helper-text::after {
+  position: static;
+}
+.input-field .helper-text[data-error='wrong'] {
+  color: #fa332e;
 }
 .signup__footer {
   display: flex;
@@ -929,4 +1074,30 @@ footer a:hover {
   align-items: center;
   margin-top: 40px;
 }
+.signup .login {
+  padding: 0 16px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.signup__signin {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.signup__signin .button--signin {
+  width: auto;
+  flex-basis: 45%;
+}
+@media only screen and (max-width: 580px) {
+  .signup__signin .button--signin {
+    width: auto;
+    flex-basis: 100%;
+    margin: 10px auto;
+  }
+}
+
 /* end SIGNUP */
