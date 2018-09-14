@@ -14,4 +14,9 @@ $(document).ready(function() {
         .fadeOut(100);
     }
   });
+
+  $('#toggleHeadDropdown').click(function() {
+    $('#headDropdown').slideToggle();
+    $('.sidebar').toggleClass('dropdown-active');
+  });
 });

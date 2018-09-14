@@ -468,6 +468,23 @@ aside.sidebar {
   overflow-x: hidden;
   color: #96a4bc;
 }
+aside.sidebar:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: #2e4363;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+aside.sidebar.dropdown-active:after {
+  opacity: 0.8;
+  z-index: 1;
+}
 
 .s__nav a:not(.button) {
   color: inherit;
@@ -481,6 +498,7 @@ aside.sidebar {
 }
 .s-nav__head {
   position: relative;
+  z-index: 2;
 }
 .s-nav__head_notification {
   position: absolute;
@@ -499,13 +517,19 @@ aside.sidebar {
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: -16px;
+  z-index: 2;
 }
 .s-nav__head_info {
+  position: relative;
   padding: 16px 11px 11px 11px;
   border-radius: 4px;
   background-color: #435672;
   text-align: center;
   color: #ffffff;
+}
+.dropdown-active .s-nav__head_info {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .s-nav__head_name {
   font-family: 'Poppins', sans-serif;
@@ -516,6 +540,37 @@ aside.sidebar {
 .s-nav__head_account {
   font-size: 12px;
   font-weight: normal;
+}
+#toggleHeadDropdown {
+  padding: 0 2px;
+}
+#toggleHeadDropdown:hover {
+  cursor: pointer;
+}
+#toggleHeadDropdown:hover .icon {
+  fill: #fff;
+}
+.s-nav__head-dropdown {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 103%;
+  width: 100%;
+  z-index: 2;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: #435672;
+  color: #96a4bc;
+}
+.s-nav__head-dropdown .s-nav__list {
+  padding: 0;
+  margin: 0;
+}
+.s-nav__head-dropdown .s-nav__list li a {
+  padding: 14px 12px 14px 48px;
+}
+.s-nav__head-dropdown .s-nav__help {
+  padding: 14px 12px;
 }
 
 .s-nav__list {
@@ -528,19 +583,19 @@ aside.sidebar {
   padding: 18px 12px 18px 48px;
   transition: all 0.3s ease-out;
 }
-.s-nav__list li:hover a {
+.s-nav__list li a:hover {
   color: #fff;
   background-color: #384c6a;
 }
-.s-nav__list li .icon {
+.s-nav__list li a .icon {
   position: absolute;
   left: 16px;
   top: 0;
   bottom: 0;
   margin: auto;
 }
-.s-nav__list li:hover .icon {
-  fill: currentColor;
+.s-nav__list li a:hover .icon {
+  fill: #fff;
 }
 .s-nav__list li.current a {
   background-color: #384c6a;
@@ -565,7 +620,8 @@ aside.sidebar {
   color: #8191ac;
 }
 .s-nav__help .icon {
-  margin-left: 8px;
+  margin-left: 8px !important;
+  position: static !important;
 }
 .s-footer {
   display: flex;

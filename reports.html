@@ -32,11 +32,59 @@
         <div class="s-nav__head_info">
           <p class="s-nav__head_name">
             <span>John Simpson</span>
-            <svg class="icon icon-down">
-              <use xlink:href="img/sprite.svg#icon-down"></use>
-            </svg>
+            <span id="toggleHeadDropdown">
+              <svg class="icon icon-down">
+                <use xlink:href="img/sprite.svg#icon-down"></use>
+              </svg>
+            </span>
           </p>
           <span class="s-nav__head_account">Basic account</span>
+          <div class="s-nav__head-dropdown" id="headDropdown">
+            <ul class="s-nav__list">
+              <li>
+                <a href="#">
+                  <svg class="icon icon-settings">
+                    <use xlink:href="img/sprite.svg#icon-settings"></use>
+                  </svg>
+                  <span>Profile Settings</span>
+                </a>
+              </li>
+              <li class="current">
+                <a href="#">
+                  <svg class="icon icon-billing">
+                    <use xlink:href="img/sprite.svg#icon-billing"></use>
+                  </svg>
+                  <span>Plan and Billing</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg class="icon icon-team">
+                    <use xlink:href="img/sprite.svg#icon-team"></use>
+                  </svg>
+                  <span>Team</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg class="icon icon-assets">
+                    <use xlink:href="img/sprite.svg#icon-assets"></use>
+                  </svg>
+                  <span>Log Out</span>
+                </a>
+              </li>
+              <li>
+                <div class="s-nav__help">
+                  <span>Do you need help</span>
+                  <span class="question tooltip" data-position="right" data-tooltip="I am a tooltip">
+                    <svg class="icon icon-help">
+                      <use xlink:href="img/sprite.svg#icon-help"></use>
+                    </svg>
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="s-nav__head_notification">
           <svg class="icon icon-notification">
