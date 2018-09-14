@@ -46,6 +46,11 @@ button:active {
   cursor: pointer;
   background: transparent;
 }
+td,
+th {
+  padding: 8px 0;
+  display: table-cell;
+}
 .icon {
   font-size: 16px;
   transition: fill 0.3s ease;
@@ -323,15 +328,13 @@ h1 {
 a {
   transition: all 0.3s ease;
 }
-.wrapper-global {
-  display: flex;
-}
+
 .button {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 200px;
+  max-width: 240px;
   text-transform: uppercase;
   line-height: 1;
   font-size: 12px;
@@ -378,14 +381,12 @@ p {
 [type='checkbox'] + span:not(.lever):after {
   bottom: 0;
   margin: auto;
-  width: 24px !important;
-  height: 24px !important;
+
   border-radius: 3px !important;
   border: solid 1px #cacfd7 !important;
 }
 [type='checkbox'].filled-in:checked + span:not(.lever):before {
-  top: 2px;
-  left: 3px;
+  top: 1px;
 }
 [type='checkbox'].filled-in:not(:checked) + span:not(.lever):after {
   background-color: #fff;
@@ -522,15 +523,15 @@ aside.sidebar {
   height: 65px;
 }
 /* end Sidebar */
-
+.main,
+.footer {
+  margin-left: 232px;
+  padding: 0 40px 0 32px;
+}
 /* Main content */
 .main {
-  margin-left: 232px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-grow: 1;
-  padding: 0 40px 0 32px;
+  min-height: calc(100vh - 66px);
+  padding-bottom: 40px;
 }
 .main-content .content__section:first-child {
   padding-top: 45px;
@@ -563,6 +564,14 @@ aside.sidebar {
   color: inherit;
   line-height: 1;
 }
+.searchbar__list [type='checkbox'] + span:not(.lever):after {
+  width: 24px !important;
+  height: 24px !important;
+}
+.searchbar__list [type='checkbox'].filled-in:checked + span:not(.lever):before {
+  top: 2px;
+  left: 3px;
+}
 .searchbar__list li label span {
   transition: color 0.25s;
 }
@@ -583,25 +592,45 @@ aside.sidebar {
   position: relative;
   display: flex;
   align-items: center;
+  width: 176px;
 }
 
 .searchbar__search input[type='search'] {
   margin: 0;
-  height: 2rem;
+  width: 100%;
+  height: 38px;
+  padding: 0 24px 0 8px;
+  border-radius: 3px;
+  line-height: 1;
   border: none;
   z-index: 1;
   color: #494c52;
+  border: solid 1px transparent;
 }
+
 .searchbar__search input::placeholder {
   color: #8191ac;
 }
-.searchbar__search input:focus:not([readonly]) {
-  border: none !important;
-  /* box-shadow: none !important; */
+.searchbar__search input:not(:placeholder-shown),
+.searchbar__search input:focus {
+  background-color: #ffffff;
+  border-color: #eff1f3 !important;
+  box-shadow: none !important;
 }
+.searchbar__search input:not(:placeholder-shown) + .searchbar__search-icon,
+.searchbar__search input:focus + .searchbar__search-icon {
+  z-index: 1;
+}
+
 .searchbar__search-icon {
-  margin-left: -16px;
+  position: absolute;
+  right: 8px;
+  top: 35%;
   z-index: 0;
+}
+
+.searchbar__search-icon:hover {
+  cursor: pointer;
 }
 /* products */
 .products .col {
@@ -609,7 +638,11 @@ aside.sidebar {
 }
 .product__item {
   margin-top: 2rem;
-  flex-basis: 23%;
+  flex-basis: 23.5%;
+  min-width: 200px;
+}
+.product__item:not(:last-child) {
+  margin-right: 2%;
 }
 .product__body {
   position: relative;
@@ -643,36 +676,22 @@ aside.sidebar {
 .product__body:hover .product__overlay {
   opacity: 0.8;
 }
+.product__check {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+}
+.product__body .product__check .pseudo-checkbox {
+  transition: all 0.3s ease;
+}
+.product__check input:not(:checked) + .pseudo-checkbox {
+  opacity: 0;
+}
+.product__body:hover .product__check .pseudo-checkbox {
+  opacity: 1;
+}
 .product__pic {
   max-width: 100%;
-}
-.product__actions {
-  margin-top: 17px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-.product__actions button,
-.product__actions a {
-  min-width: 24px;
-  min-height: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 4px;
-}
-.product__actions button:last-child,
-.product__actions a:last-child {
-  margin-right: 0;
-}
-.product__actions-copy {
-  margin-right: auto !important;
-  font-size: 12px;
-  font-weight: 500;
-  color: #ff4362;
-}
-.product__actions button:hover .icon {
-  fill: #6228ff;
 }
 .product__name {
   margin-top: 13px;
@@ -680,6 +699,50 @@ aside.sidebar {
   font-weight: 500;
   color: #0d0d0d;
 }
+.product__item .content__actions {
+  margin-top: 17px;
+}
+.product__item .content__actions button:last-child,
+.content__actions a:last-child {
+  margin-right: 0;
+}
+.product__item .content__action-label {
+  margin-right: auto !important;
+}
+/* end products */
+
+/* content actions */
+.content__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content__actions button,
+.content__actions a {
+  min-width: 24px;
+  min-height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 4px;
+}
+.content__action-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #8191ac;
+  text-transform: uppercase;
+}
+.content__action-label:hover {
+  color: #6228ff;
+}
+.content__action-label--red {
+  color: #ff4362;
+}
+.content__actions button:hover .icon {
+  fill: #6228ff;
+}
+/* end Content actions */
+
 /* pagination */
 .pagination {
   display: flex;
@@ -714,13 +777,57 @@ aside.sidebar {
 .pagination .pagination__arrow:hover .icon {
   fill: #08a896;
 }
+/* end pagination */
+
+/* Content table */
+.content__table {
+  min-height: 200px;
+  margin: 28px 0 32px;
+  padding: 0 24px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px 0 rgba(25, 15, 0, 0.1);
+}
+.content__table tr {
+  transition: background-color 0.3s ease;
+}
+.content__table tr:hover {
+  cursor: pointer;
+  background-color: rgba(239, 241, 243, 0.4);
+}
+.content__table tr:last-child {
+  border-bottom: none;
+}
+.content__table tr td:first-child {
+  width: 96px;
+}
+
+.content__table tr td:nth-child(3) {
+  max-width: 100px;
+}
+.content__table tr td:nth-child(4) {
+  max-width: 100px;
+}
+.content__table tr td:last-child {
+  max-width: 24px;
+}
+.table__product-pic {
+  padding-left: 32px;
+}
+.table__product-pic img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  object-position: center;
+}
+.table__product-name {
+  margin: 0;
+  font-size: 14px;
+  font-weight: normal;
+}
+
 /* Footer */
 .footer {
-  min-height: 66px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 40px;
   font-size: 12px;
   font-weight: normal;
   font-style: normal;
@@ -728,6 +835,12 @@ aside.sidebar {
   line-height: normal;
   letter-spacing: normal;
   color: #494c52;
+}
+.footer__inner {
+  min-height: 66px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-top: 2px solid #eff1f3;
 }
 footer * {
@@ -741,6 +854,79 @@ footer a:hover {
   color: #494c52;
 }
 
-/* ==========================================================================
-   Campaign classes
-   ========================================================================== */
+/* SIGNUP */
+.signup {
+  color: #0d0d0d;
+}
+.signup__form {
+  max-width: 480px;
+  width: 100%;
+  margin-top: 48px;
+  padding: 32px 32px 46px 32px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(37, 21, 0, 0.1), 0 0px 8px 0 rgba(37, 21, 0, 0.1);
+}
+.signup__form-header {
+  text-align: center;
+}
+.signup__form-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 32px 0 16px;
+}
+.signup__form-subtitle {
+  height: 16px;
+  margin: 16px 0 0 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+.signup .input-field {
+  position: relative;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.signup input {
+  height: 56px;
+  margin: 0 !important;
+  padding: 10px 16px !important;
+  border-radius: 3px !important;
+  background-color: #ffffff;
+  border: solid 1px #cacfd7 !important;
+  box-sizing: border-box !important;
+}
+.signup .input-field label {
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0d0d0d;
+}
+/* placeholder color */
+.signup .input-field input::placeholder {
+  color: #babfc8;
+}
+/* label underline focus color */
+.signup .input-field input:focus {
+  box-shadow: none !important;
+}
+/* valid color */
+.signup .input-field input.valid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+/* invalid color */
+.signup .input-field input.invalid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+.signup__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+/* end SIGNUP */
