@@ -97,7 +97,7 @@
           campaign</a>
       </div>
       <ul class="s-nav__list">
-        <li class="current">
+        <li>
           <a href="index.html">
             <svg class="icon icon-campaigns">
               <use xlink:href="img/sprite.svg#icon-campaigns"></use>
@@ -113,7 +113,7 @@
             <span>Templates</span>
           </a>
         </li>
-        <li>
+        <li class="current">
           <a href="myassets.html">
             <svg class="icon icon-assets">
               <use xlink:href="img/sprite.svg#icon-assets"></use>
@@ -146,11 +146,18 @@
       <img src="./img/logo.svg" class="s-footer__logo" alt="Augmania">
     </div>
   </aside>
-  <main class="main">
+  <main class="main main--assets">
     <div class="main-content">
       <section class="content__section">
         <div class="content__header">
-          <h1 class="content__title">Draft Campaigns</h1>
+          <h1 class="content__title">All Assets</h1>
+        </div>
+        <div class="content__manage">
+          <div class="row">
+            <a class="waves-effect waves-light button button--emptygreen">Upload Assets</a>
+            <button class="button button--noborders redtext">Select Assets</button>
+            <button class="button button--noborders redtext">Create a folder</button>
+          </div>
         </div>
         <div class="content__searchbar">
           <ul class="searchbar__list">
@@ -163,13 +170,19 @@
             <li>
               <label>
                 <input type="checkbox" class="filled-in">
-                <span>Show only team project</span>
+                <span>Show only images</span>
               </label>
             </li>
             <li>
               <label>
                 <input type="checkbox" class="filled-in">
-                <span>Show merge campaigns</span>
+                <span>Show only videos</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="filled-in">
+                <span>Show only 3D files</span>
               </label>
             </li>
             <li class="searchbar__search">
@@ -182,18 +195,12 @@
         </div>
         <div class="content__products">
           <div class="products">
-            <div class="row">
-              <div class="product__item">
+            <div class="row grid-cols-5">
+              <div class="product__item folder">
                 <div class="product__body">
-                  <img src="./img/products/rexona.jpg" alt="Rexona" class="product__pic">
-                  <a href="#" class="product__overlay">OPEN CAMPAIGN</a>
-                  <label class="product__check">
-                    <input type="checkbox" class="filled-in">
-                    <span class="pseudo-checkbox"></span>
-                  </label>
+                  <img src="./img/folder.svg" alt="Folder" class="product__pic">
                 </div>
                 <div class="content__actions">
-                  <button class="content__action-label content__action-label--red">COPY URL</button>
                   <button>
                     <svg class="icon icon-copy">
                       <use xlink:href="img/sprite.svg#icon-copy"></use>
@@ -204,19 +211,18 @@
                     </svg>
                   </button>
                 </div>
-                <h5 class="product__name">New campaign for Rexona woman</h5>
+                <h5 class="product__name">My logos (32 files)</h5>
               </div>
               <div class="product__item">
                 <div class="product__body">
-                  <img src="./img/products/dance.jpg" alt="Rexona" class="product__pic">
-                  <a href="#" class="product__overlay">OPEN CAMPAIGN</a>
-                  <label class="product__check">
-                    <input type="checkbox" class="filled-in">
-                    <span class="pseudo-checkbox"></span>
-                  </label>
+                  <img src="./img/products/mountains.jpg" alt="Mountains" class="product__pic">
+                  <span class="product__overlay product__type">
+                    <svg class="icon icon-3-d">
+                      <use xlink:href="img/sprite.svg#icon-3-d"></use>
+                    </svg>
+                  </span>
                 </div>
                 <div class="content__actions">
-                  <button class="content__action-label content__action-label--red">COPY URL</button>
                   <button>
                     <svg class="icon icon-copy">
                       <use xlink:href="img/sprite.svg#icon-copy"></use>
@@ -227,19 +233,18 @@
                     </svg>
                   </button>
                 </div>
-                <h5 class="product__name">New campaign for Rexona woman</h5>
+                <h5 class="product__name">campaign.png</h5>
               </div>
               <div class="product__item">
                 <div class="product__body">
-                  <img src="./img/products/rexona.jpg" alt="Rexona" class="product__pic">
-                  <a href="#" class="product__overlay">OPEN CAMPAIGN</a>
-                  <label class="product__check">
-                    <input type="checkbox" class="filled-in">
-                    <span class="pseudo-checkbox"></span>
-                  </label>
+                  <img src="./img/products/fant.jpg" alt="Mountains" class="product__pic">
+                  <span class="product__overlay product__type">
+                    <svg class="icon icon-video">
+                      <use xlink:href="img/sprite.svg#icon-video"></use>
+                    </svg>
+                  </span>
                 </div>
                 <div class="content__actions">
-                  <button class="content__action-label content__action-label--red">COPY URL</button>
                   <button>
                     <svg class="icon icon-copy">
                       <use xlink:href="img/sprite.svg#icon-copy"></use>
@@ -250,19 +255,18 @@
                     </svg>
                   </button>
                 </div>
-                <h5 class="product__name">New campaign for Rexona woman</h5>
+                <h5 class="product__name">campaign.png</h5>
               </div>
               <div class="product__item">
                 <div class="product__body">
-                  <img src="./img/products/rexona.jpg" alt="Rexona" class="product__pic">
-                  <a href="#" class="product__overlay">OPEN CAMPAIGN</a>
-                  <label class="product__check">
-                    <input type="checkbox" class="filled-in">
-                    <span class="pseudo-checkbox"></span>
-                  </label>
+                  <img src="./img/products/concert.jpg" alt="Mountains" class="product__pic">
+                  <span class="product__overlay product__type">
+                    <svg class="icon icon-3-d">
+                      <use xlink:href="img/sprite.svg#icon-3-d"></use>
+                    </svg>
+                  </span>
                 </div>
                 <div class="content__actions">
-                  <button class="content__action-label content__action-label--red">COPY URL</button>
                   <button>
                     <svg class="icon icon-copy">
                       <use xlink:href="img/sprite.svg#icon-copy"></use>
@@ -273,205 +277,139 @@
                     </svg>
                   </button>
                 </div>
-                <h5 class="product__name">New campaign for Rexona woman</h5>
+                <h5 class="product__name">campaign.png</h5>
               </div>
-
-            </div>
-          </div>
-          <div class="content__pagination">
-            <ul class="pagination">
-              <li class="pagination__arrow pagination__arrow--left"><a href="#!"><svg class="icon icon-chevron-left">
-                    <use xlink:href="img/sprite.svg#icon-chevron-left"></use>
-                  </svg></a></li>
-              <li class="waves-effect"><a href="#!">1</a></li>
-              <li class="active waves-effect"><a href="#!">2</a></li>
-              <li class="waves-effect"><a href="#!">3</a></li>
-              <li class="pagination__dots">...</li>
-              <li class="waves-effect"><a href="#!">12</a></li>
-              <li class="pagination__arrow pagination__arrow--right"><a href="#!"><svg class="icon icon-chevron-left icon-chevron-right">
-                    <use xlink:href="img/sprite.svg#icon-chevron-left"></use>
-                  </svg></a></li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <!-- new section -->
-      <section class="content__section">
-        <div class="content__header">
-          <h1 class="content__title">Published Campaign</h1>
-        </div>
-        <div class="content__searchbar">
-          <ul class="searchbar__list">
-            <li class="is-active">
-              <a href="#">Most resent</a>
-            </li>
-            <li class="a-z">
-              <a href="#">A – Z</a>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" class="filled-in">
-                <span>Show only team project</span>
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" class="filled-in">
-                <span>Show archived campaigns </span>
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" class="filled-in">
-                <span>Show merge campaigns</span>
-              </label>
-            </li>
-            <li class="searchbar__search">
-              <input type="search" placeholder="Search a campaign">
-              <svg class="searchbar__search-icon icon icon-search">
-                <use xlink:href="img/sprite.svg#icon-search"></use>
-              </svg>
-            </li>
-          </ul>
-        </div>
-        <div class="content__products">
-          <div class="products">
-            <div class="row justify-content-between">
               <div class="product__item">
                 <div class="product__body">
-                  <img src="./img/products/rexona.jpg" alt="Rexona" class="product__pic">
-                  <a href="#" class="product__overlay">OPEN CAMPAIGN</a>
-                  <label class="product__check">
-                    <input type="checkbox" class="filled-in">
-                    <span class="pseudo-checkbox"></span>
-                  </label>
+                  <img src="./img/products/mountains.jpg" alt="Mountains" class="product__pic">
+                  <span class="product__overlay product__type">
+                    <svg class="icon icon-3-d">
+                      <use xlink:href="img/sprite.svg#icon-3-d"></use>
+                    </svg>
+                  </span>
                 </div>
                 <div class="content__actions">
-                  <button class="content__action-label content__action-label--red">COPY URL</button>
-                  <button>
-                    <svg class="icon icon-analytics">
-                      <use xlink:href="img/sprite.svg#icon-analytics"></use>
-                    </svg>
-                  </button>
                   <button>
                     <svg class="icon icon-copy">
                       <use xlink:href="img/sprite.svg#icon-copy"></use>
-                    </svg>
-                  </button>
-                  <button>
-                    <svg class="icon icon-archive">
-                      <use xlink:href="img/sprite.svg#icon-archive"></use>
-                    </svg>
-                  </button>
+                    </svg></button>
                   <button>
                     <svg class="icon icon-delete">
                       <use xlink:href="img/sprite.svg#icon-delete"></use>
                     </svg>
                   </button>
                 </div>
-                <h5 class="product__name">New campaign for Rexona woman</h5>
+                <h5 class="product__name">campaign.png</h5>
               </div>
               <div class="product__item">
                 <div class="product__body">
-                  <img src="./img/products/rexona.jpg" alt="Rexona" class="product__pic">
-                  <a href="#" class="product__overlay">OPEN CAMPAIGN</a>
-                  <label class="product__check">
-                    <input type="checkbox" class="filled-in">
-                    <span class="pseudo-checkbox"></span>
-                  </label>
+                  <img src="./img/products/sunset.jpg" alt="Mountains" class="product__pic">
+                  <span class="product__overlay product__type">
+                    <svg class="icon icon-3-d">
+                      <use xlink:href="img/sprite.svg#icon-3-d"></use>
+                    </svg>
+                  </span>
                 </div>
                 <div class="content__actions">
-                  <button class="content__action-label content__action-label--red">COPY URL</button>
-                  <button>
-                    <svg class="icon icon-analytics">
-                      <use xlink:href="img/sprite.svg#icon-analytics"></use>
-                    </svg>
-                  </button>
                   <button>
                     <svg class="icon icon-copy">
                       <use xlink:href="img/sprite.svg#icon-copy"></use>
-                    </svg>
-                  </button>
-                  <button>
-                    <svg class="icon icon-archive">
-                      <use xlink:href="img/sprite.svg#icon-archive"></use>
-                    </svg>
-                  </button>
+                    </svg></button>
                   <button>
                     <svg class="icon icon-delete">
                       <use xlink:href="img/sprite.svg#icon-delete"></use>
                     </svg>
                   </button>
                 </div>
-                <h5 class="product__name">New campaign for Rexona woman</h5>
+                <h5 class="product__name">campaign.png</h5>
               </div>
               <div class="product__item">
                 <div class="product__body">
-                  <img src="./img/products/rexona.jpg" alt="Rexona" class="product__pic">
-                  <a href="#" class="product__overlay">OPEN CAMPAIGN</a>
-                  <label class="product__check">
-                    <input type="checkbox" class="filled-in">
-                    <span class="pseudo-checkbox"></span>
-                  </label>
+                  <img src="./img/products/fant.jpg" alt="Mountains" class="product__pic">
+                  <span class="product__overlay product__type">
+                    <svg class="icon icon-video">
+                      <use xlink:href="img/sprite.svg#icon-video"></use>
+                    </svg>
+                  </span>
                 </div>
                 <div class="content__actions">
-                  <button class="content__action-label content__action-label--red">COPY URL</button>
-                  <button>
-                    <svg class="icon icon-analytics">
-                      <use xlink:href="img/sprite.svg#icon-analytics"></use>
-                    </svg>
-                  </button>
                   <button>
                     <svg class="icon icon-copy">
                       <use xlink:href="img/sprite.svg#icon-copy"></use>
-                    </svg>
-                  </button>
-                  <button>
-                    <svg class="icon icon-archive">
-                      <use xlink:href="img/sprite.svg#icon-archive"></use>
-                    </svg>
-                  </button>
+                    </svg></button>
                   <button>
                     <svg class="icon icon-delete">
                       <use xlink:href="img/sprite.svg#icon-delete"></use>
                     </svg>
                   </button>
                 </div>
-                <h5 class="product__name">New campaign for Rexona woman</h5>
+                <h5 class="product__name">campaign.png</h5>
               </div>
               <div class="product__item">
                 <div class="product__body">
-                  <img src="./img/products/rexona.jpg" alt="Rexona" class="product__pic">
-                  <a href="#" class="product__overlay">OPEN CAMPAIGN</a>
-                  <label class="product__check">
-                    <input type="checkbox" class="filled-in">
-                    <span class="pseudo-checkbox"></span>
-                  </label>
+                  <img src="./img/products/mountains.jpg" alt="Mountains" class="product__pic">
+                  <span class="product__overlay product__type">
+                    <svg class="icon icon-image">
+                      <use xlink:href="img/sprite.svg#icon-image"></use>
+                    </svg>
+                  </span>
                 </div>
                 <div class="content__actions">
-                  <button class="content__action-label content__action-label--red">COPY URL</button>
-                  <button>
-                    <svg class="icon icon-analytics">
-                      <use xlink:href="img/sprite.svg#icon-analytics"></use>
-                    </svg>
-                  </button>
                   <button>
                     <svg class="icon icon-copy">
                       <use xlink:href="img/sprite.svg#icon-copy"></use>
-                    </svg>
-                  </button>
-                  <button>
-                    <svg class="icon icon-archive">
-                      <use xlink:href="img/sprite.svg#icon-archive"></use>
-                    </svg>
-                  </button>
+                    </svg></button>
                   <button>
                     <svg class="icon icon-delete">
                       <use xlink:href="img/sprite.svg#icon-delete"></use>
                     </svg>
                   </button>
                 </div>
-                <h5 class="product__name">New campaign for Rexona woman</h5>
+                <h5 class="product__name">campaign.png</h5>
+              </div>
+              <div class="product__item">
+                <div class="product__body">
+                  <img src="./img/products/fant.jpg" alt="Mountains" class="product__pic">
+                  <span class="product__overlay product__type">
+                    <svg class="icon icon-image">
+                      <use xlink:href="img/sprite.svg#icon-image"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="content__actions">
+                  <button>
+                    <svg class="icon icon-copy">
+                      <use xlink:href="img/sprite.svg#icon-copy"></use>
+                    </svg></button>
+                  <button>
+                    <svg class="icon icon-delete">
+                      <use xlink:href="img/sprite.svg#icon-delete"></use>
+                    </svg>
+                  </button>
+                </div>
+                <h5 class="product__name">campaign.png</h5>
+              </div>
+              <div class="product__item">
+                <div class="product__body">
+                  <img src="./img/products/mountains.jpg" alt="Mountains" class="product__pic">
+                  <span class="product__overlay product__type">
+                    <svg class="icon icon-3-d">
+                      <use xlink:href="img/sprite.svg#icon-3-d"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="content__actions">
+                  <button>
+                    <svg class="icon icon-copy">
+                      <use xlink:href="img/sprite.svg#icon-copy"></use>
+                    </svg></button>
+                  <button>
+                    <svg class="icon icon-delete">
+                      <use xlink:href="img/sprite.svg#icon-delete"></use>
+                    </svg>
+                  </button>
+                </div>
+                <h5 class="product__name">campaign.png</h5>
               </div>
             </div>
           </div>
