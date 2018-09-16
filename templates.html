@@ -93,7 +93,7 @@
         </div>
       </div>
       <div class="s-nav__create">
-        <a href="#create-campaign" class="button button--red modal-trigger waves-effect waves-light">Create a
+        <a href="#modalCreateCampaign" class="button button--red modal-trigger waves-effect waves-light">Create a
           campaign</a>
       </div>
       <ul class="s-nav__list">
@@ -317,6 +317,83 @@
       </div>
     </div>
   </footer>
+
+  <!-- Modal Structure -->
+  <div id="modalCreateCampaign" class="modal">
+    <div class="modal-content">
+      <div class="fm">
+        <span class="btn-close modal-close">
+          <svg class="icon icon-close">
+            <use xlink:href="img/sprite.svg#icon-close"></use>
+          </svg>
+        </span>
+        <div class="fm__contr">
+          <div class="fm__form">
+            <div class="fm__form-inner">
+              <div class="fm__form-header">
+                <h4 class="fm__form-title">Add your campaign info</h4>
+              </div>
+              <form>
+                <div class="row row-fileupload">
+                  <div class="input-field">
+                    <input type="text" placeholder="Campaign title" class="validate">
+                    <span class="helper-text" data-error="This name contains invalid symbols."></span>
+                  </div>
+                  <div class="file-field input-field">
+                    <div class="upload-button">
+                      <span>
+                        <svg class="icon icon-image-red">
+                          <use xlink:href="img/sprite.svg#icon-image-red"></use>
+                        </svg>
+                      </span>
+                      <input type="file">
+                    </div>
+                    <div class="file-path-wrapper">
+                      <input class="file-path validate" type="text" placeholder="Upload image" readonly>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-field">
+                  <input type="text" placeholder="Campaign URL" class="validate">
+                  <span class="helper-text" data-error="This name contains invalid symbols."></span>
+                </div>
+                <div class="fm__switch">
+                  <div class="row justify-content-center">
+                    <p class="switch__caption">Choose a display sequence</p>
+                    <span class="question tooltip" data-position="right" data-tooltip="I am a tooltip">
+                      <svg class="icon icon-info">
+                        <use xlink:href="img/sprite.svg#icon-info"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="row  justify-content-center">
+                    <div class="switch">
+                      <label>
+                        <span class="switch__value">Sequential</span>
+                        <input type="checkbox">
+                        <span class="lever"></span>
+                        <span class="switch__value">Random</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="fm__footer">
+                  <button type="submit" class="button button--red waves-effect waves-light">CREATE A
+                    campaign</button>
+                </div>
+              </form>
+            </div>
+            <div class="fm__footer">
+              <div class="row align-items-baseline">
+                <p>Do you want create from template?</p>
+                <a href="#" class="login redtext">Create</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
