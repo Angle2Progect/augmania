@@ -1,0 +1,333 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+
+  <!-- All icons from sprite.svg require a server for displaying. -->
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <aside class="sidebar scroll-y">
+    <div class="s__nav">
+      <div class="s-nav__head">
+        <div class="s-nav__head_ava">
+          <img src="./img/avatar.png" alt="Avatar">
+        </div>
+        <div class="s-nav__head_info">
+          <p class="s-nav__head_name">
+            <span>John Simpson</span>
+            <span id="toggleHeadDropdown">
+              <svg class="icon icon-down">
+                <use xlink:href="img/sprite.svg#icon-down"></use>
+              </svg>
+            </span>
+          </p>
+          <span class="s-nav__head_account">Basic account</span>
+          <div class="s-nav__head-dropdown" id="headDropdown">
+            <ul class="s-nav__list">
+              <li>
+                <a href="profile-settings.html">
+                  <svg class="icon icon-settings">
+                    <use xlink:href="img/sprite.svg#icon-settings"></use>
+                  </svg>
+                  <span>Profile Settings</span>
+                </a>
+              </li>
+              <li class="current">
+                <a href="profile-settings.html">
+                  <svg class="icon icon-billing">
+                    <use xlink:href="img/sprite.svg#icon-billing"></use>
+                  </svg>
+                  <span>Plan and Billing</span>
+                </a>
+              </li>
+              <li>
+                <a href="profile-settings.html">
+                  <svg class="icon icon-team">
+                    <use xlink:href="img/sprite.svg#icon-team"></use>
+                  </svg>
+                  <span>Team</span>
+                </a>
+              </li>
+              <li>
+                <a href="profile-settings.html">
+                  <svg class="icon icon-log-out">
+                    <use xlink:href="img/sprite.svg#icon-log-out"></use>
+                  </svg>
+                  <span>Log Out</span>
+                </a>
+              </li>
+              <li>
+                <div class="s-nav__help">
+                  <span>Do you need help</span>
+                  <span class="question tooltip" data-position="right" data-tooltip="I am a tooltip">
+                    <svg class="icon icon-help">
+                      <use xlink:href="img/sprite.svg#icon-help"></use>
+                    </svg>
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="s-nav__head_notification">
+          <svg class="icon icon-notification">
+            <use xlink:href="img/sprite.svg#icon-notification"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="s-nav__create">
+        <a href="#modalCreateCampaign" class="button button--red modal-trigger waves-effect waves-light">Create a
+          campaign</a>
+      </div>
+      <ul class="s-nav__list">
+        <li class="current">
+          <a href="index.html">
+            <svg class="icon icon-campaigns">
+              <use xlink:href="img/sprite.svg#icon-campaigns"></use>
+            </svg>
+            <span>My Campaigns</span>
+          </a>
+        </li>
+        <li>
+          <a href="templates.html">
+            <svg class="icon icon-templates">
+              <use xlink:href="img/sprite.svg#icon-templates"></use>
+            </svg>
+            <span>Templates</span>
+          </a>
+        </li>
+        <li>
+          <a href="myassets.html">
+            <svg class="icon icon-assets">
+              <use xlink:href="img/sprite.svg#icon-assets"></use>
+            </svg>
+            <span>My Assets</span>
+          </a>
+        </li>
+        <li>
+          <a href="reports.html">
+            <svg class="icon icon-reports">
+              <use xlink:href="img/sprite.svg#icon-reports"></use>
+            </svg>
+            <span>Reports</span>
+          </a>
+        </li>
+      </ul>
+      <div class="s-nav__upgrade">
+        <a class="waves-effect waves-light button button--emptygreen">Upgrade</a>
+      </div>
+      <div class="s-nav__help">
+        <span>Do you need help</span>
+        <span class="question tooltip" data-position="right" data-tooltip="I am a tooltip">
+          <svg class="icon icon-help">
+            <use xlink:href="img/sprite.svg#icon-help"></use>
+          </svg>
+        </span>
+      </div>
+    </div>
+    <div class="s-footer">
+      <img src="./img/logo.svg" class="s-footer__logo" alt="Augmania">
+    </div>
+  </aside>
+  <main class="main">
+    <div class="main-content">
+      <section class="content__section">
+        <div class="content__header">
+          <h1 class="content__title">Your Account</h1>
+        </div>
+        <div class="content__tabs">
+          <div class="tabs-nav">
+            <ul class="tabs">
+              <li class="tab"><a href="#planCard1">Account Information</a></li>
+              <li class="tab"><a class="active" href="#planCard2">Plan and Billing</a></li>
+              <li class="tab"><a href="#planCard3">Team</a></li>
+            </ul>
+          </div>
+          <div class="tabs__body">
+            <div id="planCard1">Account Information</div>
+            <div id="planCard2" class=" active">
+              <div class="plan">
+                <!-- new card -->
+                <div class="plan__card">
+                  <div class="plan__icon">
+                    <svg class="icon icon-plane">
+                      <use xlink:href="img/sprite.svg#icon-plane"></use>
+                    </svg>
+                  </div>
+                  <h4 class="plan__name">Basic</h4>
+                  <p class="plan__price">Free</p>
+                  <div class="plan__descr">
+                    <p>1 Project</p>
+                    <p>2 Publications</p>
+                    <p>5 Drafts</p>
+                  </div>
+                </div>
+                <!-- new card -->
+                <div class="plan__card">
+                  <div class="plan__icon">
+                    <svg class="icon icon-plane">
+                      <use xlink:href="img/sprite.svg#icon-plane"></use>
+                    </svg>
+                  </div>
+                  <h4 class="plan__name">Pro</h4>
+                  <p class="plan__price">$200<span class="small">/month</span></p>
+                  <div class="plan__descr">
+                    <p>1 Project</p>
+                    <p>100 Publications</p>
+                    <p>100 Drafts</p>
+                  </div>
+                  <p class="plan__current">This is your current plan</p>
+                  <div class="plan__footer">
+                    <p class="greytext">Or prepay annually (save 15%)</p>
+                    <p class="semiboldtext">$2000/year</p>
+                  </div>
+                </div>
+                <!-- new card -->
+                <div class="plan__card">
+                  <div class="plan__icon">
+                    <svg class="icon icon-plane">
+                      <use xlink:href="img/sprite.svg#icon-plane"></use>
+                    </svg>
+                  </div>
+                  <h4 class="plan__name">Enterprise</h4>
+                  <p class="plan__price">$600<span class="small">/month</span></p>
+                  <div class="plan__descr">
+                    <p>Unlimited Project</p>
+                    <p>Unlimited Publications</p>
+                    <p>Unlimited Drafts</p>
+                  </div>
+                  <a href="#" class="button button--red waves-effect waves-light">Upgrade</a>
+                  <div class="plan__footer">
+                    <p class="greytext">Or prepay annually (save 15%)</p>
+                    <p class="semiboldtext">$2000/year</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="planCard3">Account Information</div>
+          </div>
+        </div>
+      </section>
+      <section class="content__section">
+        <h2 class="content__title">Payment Method</h2>
+        <div class="payment">
+          <a href="#" class="waves-effect waves-light button button--emptygreen">Edit Payment Method</a>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer__inner">
+      <div>© 2018 Augmania</div>
+      <div>
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Structure -->
+  <div id="modalCreateCampaign" class="modal">
+    <div class="modal-content">
+      <div class="fm">
+        <span class="btn-close modal-close">
+          <svg class="icon icon-close">
+            <use xlink:href="img/sprite.svg#icon-close"></use>
+          </svg>
+        </span>
+        <div class="fm__contr">
+          <div class="fm__form">
+            <div class="fm__form-inner">
+              <div class="fm__form-header">
+                <h4 class="fm__form-title">Add your campaign info</h4>
+              </div>
+              <form>
+                <div class="row row-fileupload">
+                  <div class="input-field">
+                    <input type="text" placeholder="Campaign title" class="validate">
+                    <span class="helper-text" data-error="This name contains invalid symbols."></span>
+                  </div>
+                  <div class="file-field input-field">
+                    <div class="upload-button">
+                      <span>
+                        <svg class="icon icon-image-red">
+                          <use xlink:href="img/sprite.svg#icon-image-red"></use>
+                        </svg>
+                      </span>
+                      <input type="file">
+                    </div>
+                    <div class="file-path-wrapper">
+                      <input class="file-path validate" type="text" placeholder="Upload image" readonly>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-field">
+                  <input type="text" placeholder="Campaign URL" class="validate">
+                  <span class="helper-text" data-error="This name contains invalid symbols."></span>
+                </div>
+                <div class="fm__switch">
+                  <div class="row justify-content-center">
+                    <p class="switch__caption">Choose a display sequence</p>
+                    <span class="question tooltip" data-position="right" data-tooltip="I am a tooltip">
+                      <svg class="icon icon-info">
+                        <use xlink:href="img/sprite.svg#icon-info"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="row  justify-content-center">
+                    <div class="switch">
+                      <label>
+                        <span class="switch__value">Sequential</span>
+                        <input type="checkbox">
+                        <span class="lever"></span>
+                        <span class="switch__value">Random</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="fm__footer">
+                  <button type="submit" class="button button--red waves-effect waves-light">CREATE A
+                    campaign</button>
+                </div>
+              </form>
+            </div>
+            <div class="fm__footer">
+              <div class="row align-items-baseline">
+                <p>Do you want create from template?</p>
+                <a href="#" class="login redtext">Create</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+
+  <script src="js/vendor/materialize.min.js"></script>
+  <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
