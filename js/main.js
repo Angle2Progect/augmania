@@ -37,4 +37,40 @@ $(document).ready(function() {
       $(this).removeClass('turned-on');
     }
   });
+  // show change password inputs
+  $('#btnChangePassword').on('click', function() {
+    $(this)
+      .closest('.password-wrap')
+      .find('.input-field')
+      .fadeIn();
+    $(this)
+      .parent()
+      .animate({ height: 0, opacity: 0, margin: '-24px 0 0 0', width: 0 }, 300);
+  });
+  // file upload with thumbnail
 });
+
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function(e) {
+      $('.image-upload-wrap').hide();
+
+      $('.file-upload-image').attr('src', e.target.result);
+      $('.file-upload-content').show();
+
+      // $('.image-title').html(input.files[0].name);
+    };
+
+    reader.readAsDataURL(input.files[0]);
+  } else {
+    removeUpload();
+  }
+}
+
+function removeUpload() {
+  $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+  $('.file-upload-content').hide();
+  $('.image-upload-wrap').show();
+}

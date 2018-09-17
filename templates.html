@@ -174,7 +174,7 @@
               <div class="product__item">
                 <div class="product__body">
                   <img src="./img/products/rexona.jpg" alt="Rexona" class="product__pic">
-                  <a href="#" class="product__overlay product__add"></a>
+                  <a href="#modalCreateFromTemplate" class="product__overlay product__add modal-trigger"></a>
                 </div>
                 <div class="content__actions justify-content-between">
                   <h5 class="product__name">Restaurant campaign template</h5>
@@ -189,7 +189,7 @@
               <div class="product__item">
                 <div class="product__body">
                   <img src="./img/products/rexona.jpg" alt="Rexona" class="product__pic">
-                  <a href="#" class="product__overlay product__add"></a>
+                  <a href="#modalCreateFromTemplate" class="product__overlay product__add modal-trigger"></a>
                 </div>
                 <div class="content__actions justify-content-between">
                   <h5 class="product__name">Restaurant campaign template</h5>
@@ -203,7 +203,7 @@
               <div class="product__item">
                 <div class="product__body">
                   <img src="./img/products/fanta.jpg" alt="Rexona" class="product__pic">
-                  <a href="#" class="product__overlay product__add"></a>
+                  <a href="#modalCreateFromTemplate" class="product__overlay product__add modal-trigger"></a>
                   <span class="product__label">New</span>
                 </div>
                 <div class="content__actions justify-content-between">
@@ -218,7 +218,7 @@
               <div class="product__item">
                 <div class="product__body">
                   <img src="./img/products/danone.jpg" alt="Rexona" class="product__pic">
-                  <a href="#" class="product__overlay product__add"></a>
+                  <a href="#modalCreateFromTemplate" class="product__overlay product__add modal-trigger"></a>
                   <span class="product__label">Popular</span>
                 </div>
                 <div class="content__actions justify-content-between">
@@ -233,7 +233,7 @@
               <div class="product__item">
                 <div class="product__body">
                   <img src="./img/products/rexona.jpg" alt="Rexona" class="product__pic">
-                  <a href="#" class="product__overlay product__add"></a>
+                  <a href="#modalCreateFromTemplate" class="product__overlay product__add modal-trigger"></a>
                 </div>
                 <div class="content__actions justify-content-between">
                   <h5 class="product__name">Restaurant campaign template</h5>
@@ -248,7 +248,7 @@
               <div class="product__item">
                 <div class="product__body">
                   <img src="./img/products/rexona.jpg" alt="Rexona" class="product__pic">
-                  <a href="#" class="product__overlay product__add"></a>
+                  <a href="#modalCreateFromTemplate" class="product__overlay product__add modal-trigger"></a>
                 </div>
                 <div class="content__actions justify-content-between">
                   <h5 class="product__name">Restaurant campaign template</h5>
@@ -262,7 +262,7 @@
               <div class="product__item">
                 <div class="product__body">
                   <img src="./img/products/fanta.jpg" alt="Rexona" class="product__pic">
-                  <a href="#" class="product__overlay product__add"></a>
+                  <a href="#modalCreateFromTemplate" class="product__overlay product__add modal-trigger"></a>
                 </div>
                 <div class="content__actions justify-content-between">
                   <h5 class="product__name">Restaurant campaign template</h5>
@@ -276,7 +276,7 @@
               <div class="product__item">
                 <div class="product__body">
                   <img src="./img/products/danone.jpg" alt="Rexona" class="product__pic">
-                  <a href="#" class="product__overlay product__add"></a>
+                  <a href="#modalCreateFromTemplate" class="product__overlay product__add modal-trigger"></a>
                 </div>
                 <div class="content__actions justify-content-between">
                   <h5 class="product__name">Restaurant campaign template</h5>
@@ -331,7 +331,7 @@
           <div class="fm__form">
             <div class="fm__form-inner">
               <div class="fm__form-header">
-                <h4 class="fm__form-title">Add your campaign info</h4>
+                <h4 class="content-semi-title">Add your campaign info</h4>
               </div>
               <form>
                 <div class="row row-fileupload">
@@ -376,6 +376,63 @@
                       </label>
                     </div>
                   </div>
+                </div>
+                <div class="fm__footer">
+                  <button type="submit" class="button button--red waves-effect waves-light">CREATE A
+                    campaign</button>
+                </div>
+              </form>
+            </div>
+            <div class="fm__footer">
+              <div class="row align-items-baseline">
+                <p>Do you want create from template?</p>
+                <a href="#" class="login redtext">Create</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- next modal -->
+  <div id="modalCreateFromTemplate" class="modal">
+    <div class="modal-content">
+      <div class="fm">
+        <span class="btn-close modal-close">
+          <svg class="icon icon-close">
+            <use xlink:href="img/sprite.svg#icon-close"></use>
+          </svg>
+        </span>
+        <div class="fm__contr">
+          <div class="fm__form">
+            <div class="fm__form-inner">
+              <div class="fm__form-header">
+                <h4 class="content-semi-title">Edit template title and URL</h4>
+              </div>
+              <form>
+                <div class="row row-fileupload">
+                  <div class="input-field">
+                    <input type="text" placeholder="Campaign title" class="validate">
+                    <span class="helper-text" data-error="This name contains invalid symbols."></span>
+                  </div>
+                  <div class="file-field input-field">
+                    <div class="upload-button">
+                      <span>
+                        <svg class="icon icon-image-red">
+                          <use xlink:href="img/sprite.svg#icon-image-red"></use>
+                        </svg>
+                      </span>
+                      <input type="file">
+                    </div>
+                    <div class="file-path-wrapper">
+                      <input class="file-path validate" type="text" placeholder="Upload image" readonly>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-field">
+                  <input type="text" placeholder="Campaign URL" class="validate">
+                  <span class="helper-text" data-error="This name contains invalid symbols."></span>
                 </div>
                 <div class="fm__footer">
                   <button type="submit" class="button button--red waves-effect waves-light">CREATE A

@@ -156,19 +156,112 @@
           <div class="tabs-nav">
             <ul class="tabs">
               <li class="tab"><a href="#planCard1">Account Information</a></li>
-              <li class="tab"><a class="active" href="#planCard2">Plan and Billing</a></li>
+              <li class="tab"><a href="#planCard2" class="active">Plan and Billing</a></li>
               <li class="tab"><a href="#planCard3">Team</a></li>
             </ul>
           </div>
           <div class="tabs__body">
-            <div id="planCard1">Account Information</div>
-            <div id="planCard2" class=" active">
+            <!-- Tab 1 -->
+            <div id="planCard1">
+              <div class="fm fm--settings">
+                <div class="fm__contr">
+                  <div class="fm__form">
+                    <div class="fm__form-inner">
+                      <form>
+                        <div class="row justify-content-between">
+                          <div class="form__col-left">
+                            <div class="input-field">
+                              <p class="input-field__prefix">Name</p>
+                              <input type="text" class="validate" value="John Sipmson">
+                              <span class="helper-text" data-error="This name contains invalid symbols."></span>
+                            </div>
+                            <div class="input-field">
+                              <p class="input-field__prefix">Organization</p>
+                              <input type="text" class="validate" value="H&M">
+                              <span class="helper-text" data-error="This name contains invalid symbols."></span>
+                            </div>
+                            <div class="input-field">
+                              <p class="input-field__prefix">Email</p>
+                              <input type="email" class="validate" value="johnsimpson@gmail.com">
+                              <span class="helper-text" data-error="This mail adress not valid."></span>
+                            </div>
+                            <div class="password-wrap">
+                              <div class="input-field will-hide">
+                                <p class="input-field__prefix">Password</p>
+                                <button type="button" class="button redtext" id="btnChangePassword">
+                                  <svg class="icon icon-edit">
+                                    <use xlink:href="img/sprite.svg#icon-edit"></use>
+                                  </svg>
+                                  <span>Change Password</span>
+                                </button>
+                              </div>
+                              <div class="input-field">
+                                <p class="input-field__prefix">Password</p>
+                                <input type="password" class="validate" placeholder="Type your current password">
+                                <span class="helper-text" data-error="The password must be at least 8 characters"></span>
+                              </div>
+                              <div class="input-field">
+                                <input type="password" class="validate" placeholder="Type your new password">
+                                <span class="helper-text" data-error="The password must be at least 8 characters"></span>
+                              </div>
+                            </div>
+                            <div class="fm__footer">
+                              <button type="submit" class="button button--red  waves-effect waves-light">Save changes</button>
+                            </div>
+                          </div>
+                          <div class="form__col-right">
+                            <div class="file-upload">
+                              <div class="image-upload-wrap">
+                                <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+                                <button class="button redtext btn-upload">
+                                  <span class="cirlce">
+                                    <svg class="icon icon-arrow-up">
+                                      <use xlink:href="img/sprite.svg#icon-arrow-up"></use>
+                                    </svg>
+                                  </span>
+                                  <br>
+                                  <span>Upload image</span>
+                                </button>
+                              </div>
+                              <div class="file-upload-content">
+                                <img class="file-upload-image" src="#" alt="your image" />
+                                <div class="image-title-wrap">
+                                  <button type="button" onclick="removeUpload()" class="remove-image redtext">Remove
+                                    <br> <span class="image-title"></span></button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                      <div class="settigns__account">
+                        <button class="button greytext">
+                          <svg class="icon icon-log-out">
+                            <use xlink:href="img/sprite.svg#icon-log-out"></use>
+                          </svg>
+                          <span>Log Out</span>
+                        </button>
+                        <button class="button redtext">
+                          <svg class="icon icon-delete">
+                            <use xlink:href="img/sprite.svg#icon-delete"></use>
+                          </svg>
+                          <span>Delete account</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!-- Tab 2 -->
+            <div id="planCard2">
               <div class="plan">
                 <!-- new card -->
                 <div class="plan__card">
                   <div class="plan__icon">
                     <svg class="icon icon-plane">
-                      <use xlink:href="img/sprite.svg#icon-plane"></use>
+                      <use xlink:href="img/sprite.svg#icon-paper-plane"></use>
                     </svg>
                   </div>
                   <h4 class="plan__name">Basic</h4>
@@ -203,7 +296,7 @@
                 <div class="plan__card">
                   <div class="plan__icon">
                     <svg class="icon icon-plane">
-                      <use xlink:href="img/sprite.svg#icon-plane"></use>
+                      <use xlink:href="img/sprite.svg#icon-rocket"></use>
                     </svg>
                   </div>
                   <h4 class="plan__name">Enterprise</h4>
@@ -220,15 +313,78 @@
                   </div>
                 </div>
               </div>
+              <div class="content__payment">
+                <h3 class="content-semi-title">Payment Method</h3>
+                <a class="waves-effect waves-light button button--emptygreen">Edit Payment Method</a>
+              </div>
             </div>
-            <div id="planCard3">Account Information</div>
+            <!-- Tab 3 -->
+            <div id="planCard3">
+              <div class="fm fm--settings">
+                <div class="fm__contr">
+                  <div class="fm__form">
+                    <div class="fm__form-inner">
+                      <form>
+                        <div class="input-field">
+                          <p class="input-field__prefix">Name</p>
+                          <input type="text" class="validate" value="John Sipmson">
+                          <span class="helper-text" data-error="This name contains invalid symbols."></span>
+                        </div>
+                        <div class="input-field">
+                          <p class="input-field__prefix">Organization</p>
+                          <input type="text" class="validate" value="H&M">
+                          <span class="helper-text" data-error="This name contains invalid symbols."></span>
+                        </div>
+                        <div class="input-field">
+                          <p class="input-field__prefix">Email</p>
+                          <input type="email" class="validate" value="johnsimpson@gmail.com">
+                          <span class="helper-text" data-error="This mail adress not valid."></span>
+                        </div>
+                        <div class="password-wrap">
+                          <div class="input-field will-hide">
+                            <p class="input-field__prefix">Password</p>
+                            <button type="button" class="button redtext" id="btnChangePassword">
+                              <svg class="icon icon-edit">
+                                <use xlink:href="img/sprite.svg#icon-edit"></use>
+                              </svg>
+                              <span>Change Password</span>
+                            </button>
+                          </div>
+                          <div class="input-field">
+                            <p class="input-field__prefix">Password</p>
+                            <input type="password" class="validate" placeholder="Type your current password">
+                            <span class="helper-text" data-error="The password must be at least 8 characters"></span>
+                          </div>
+                          <div class="input-field">
+                            <input type="password" class="validate" placeholder="Type your new password">
+                            <span class="helper-text" data-error="The password must be at least 8 characters"></span>
+                          </div>
+                        </div>
+                        <div class="fm__footer">
+                          <button type="submit" class="button button--red  waves-effect waves-light">Save changes</button>
+                        </div>
+                      </form>
+                      <div class="settigns__account">
+                        <button class="button greytext">
+                          <svg class="icon icon-log-out">
+                            <use xlink:href="img/sprite.svg#icon-log-out"></use>
+                          </svg>
+                          <span>Log Out</span>
+                        </button>
+                        <button class="button redtext">
+                          <svg class="icon icon-delete">
+                            <use xlink:href="img/sprite.svg#icon-delete"></use>
+                          </svg>
+                          <span>Delete account</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-      <section class="content__section">
-        <h2 class="content__title">Payment Method</h2>
-        <div class="payment">
-          <a href="#" class="waves-effect waves-light button button--emptygreen">Edit Payment Method</a>
         </div>
       </section>
     </div>
@@ -256,7 +412,7 @@
           <div class="fm__form">
             <div class="fm__form-inner">
               <div class="fm__form-header">
-                <h4 class="fm__form-title">Add your campaign info</h4>
+                <h4 class="content-semi-title">Add your campaign info</h4>
               </div>
               <form>
                 <div class="row row-fileupload">
