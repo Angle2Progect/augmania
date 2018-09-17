@@ -13,7 +13,9 @@
         <path d="M-1-1h16v16H-1z"/>
     </g>
 </symbol>
-
+<symbol id="icon-tick" viewBox="0 0 8 6">
+    <path fill-rule="evenodd" d="M6.783 0L2.435 3.846 1.217 2.769 0 3.846 2.435 6 8 1.077z"/>
+</symbol>
 <symbol id="icon-analytics" viewBox="0 0 19 14">
     <g fill-rule="evenodd">
         <g fill-rule="nonzero">

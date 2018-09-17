@@ -18,9 +18,9 @@ body {
 }
 
 /* ==========================================================================
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Poppins', sans-serif;
-   ========================================================================== */
+       font-family: 'Roboto', sans-serif;
+       font-family: 'Poppins', sans-serif;
+      ========================================================================== */
 
 * {
   box-sizing: border-box;
@@ -35,6 +35,9 @@ body {
 }
 .justify-content-center {
   justify-content: center !important;
+}
+.justify-content-end {
+  justify-content: flex-end !important;
 }
 .align-items-center {
   align-items: center !important;
@@ -114,6 +117,11 @@ th {
   transform: scaleX(-1);
   filter: FlipH;
   -ms-filter: 'FlipH';
+}
+.icon-tick {
+  width: 0.5em;
+  height: 0.375em;
+  fill: #fff;
 }
 .icon-copy,
 .icon-delete {
@@ -277,25 +285,25 @@ th {
 }
 
 /*==========================================================================
-   Helper classes
-   ========================================================================== */
+      Helper classes
+      ========================================================================== */
 
 /*
- * Hide visually and from screen readers
- */
+    * Hide visually and from screen readers
+    */
 
 .hidden {
   display: none !important;
 }
 
 /*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
+    * Hide only visually, but have it available for screen readers:
+    * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+    *
+    * 1. For long content, line feeds are not interpreted as spaces and small width
+    *    causes content to wrap 1 word per line:
+    *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+    */
 
 .visuallyhidden {
   border: 0;
@@ -310,10 +318,10 @@ th {
 }
 
 /*
- * Extends the .visuallyhidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
+    * Extends the .visuallyhidden class to allow the element
+    * to be focusable when navigated to via the keyboard:
+    * https://www.drupal.org/node/897638
+    */
 
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
@@ -327,24 +335,24 @@ th {
 }
 
 /*
- * Hide visually and from screen readers, but maintain layout
- */
+    * Hide visually and from screen readers, but maintain layout
+    */
 
 .invisible {
   visibility: hidden;
 }
 
 /*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
+    * Clearfix: contain floats
+    *
+    * For modern browsers
+    * 1. The space content is one way to avoid an Opera bug when the
+    *    `contenteditable` attribute is included anywhere else in the document.
+    *    Otherwise it causes space to appear at the top and bottom of elements
+    *    that receive the `clearfix` class.
+    * 2. The use of `table` rather than `block` is only necessary if using
+    *    `:before` to contain the top-margins of child elements.
+    */
 
 .clearfix:before,
 .clearfix:after {
@@ -426,6 +434,20 @@ button:active {
 .button--emptygreen:active {
   color: #08a896;
   border-color: #08a896;
+}
+.button--emptyred {
+  height: 56px;
+  max-width: 200px;
+  border-radius: 28px;
+  border: solid 1px #ff4362;
+  background-color: transparent;
+  color: #ff4362;
+}
+.button--emptyred:hover,
+.button--emptyred:focus,
+.button--emptyred:active {
+  color: #ff4362;
+  border-color: #ff4362;
 }
 .button--signin {
   height: 40px;
@@ -516,8 +538,8 @@ p {
   padding-left: 32px;
 }
 /* ==========================================================================
-   Layout classes
-   ========================================================================== */
+      Layout classes
+      ========================================================================== */
 .no-sidebar .main,
 .no-sidebar .footer {
   margin-left: 0;
@@ -1252,16 +1274,16 @@ footer a:hover {
   margin-bottom: 24px;
 }
 /* .fm .input-field .icon {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  right: 16px;
-}
-.fm .input-field .icon > .icon {
-  position: static;
-  right: 0;
-} */
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     margin: auto;
+     right: 16px;
+   }
+   .fm .input-field .icon > .icon {
+     position: static;
+     right: 0;
+   } */
 .icon-show:hover {
   fill: #8191ac;
 }
@@ -1349,20 +1371,20 @@ footer a:hover {
   color: #fa332e;
 }
 /* .input-field {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.input-field__prefix {
-  max-width: 104px;
-  width: 100%;
-}
-.input-field__prefix + input {
-  width: calc(100% - 104px) !important;
-}
-.input-field__prefix + input + .helper-text {
-  padding-left: 104px;
-} */
+     display: flex;
+     align-items: center;
+     flex-wrap: wrap;
+   }
+   .input-field__prefix {
+     max-width: 104px;
+     width: 100%;
+   }
+   .input-field__prefix + input {
+     width: calc(100% - 104px) !important;
+   }
+   .input-field__prefix + input + .helper-text {
+     padding-left: 104px;
+   } */
 /* switcher */
 .fm .switch {
   color: #babfc8;
@@ -1653,9 +1675,16 @@ footer a:hover {
 .content-semi-title {
   font-family: 'Poppins', sans-serif;
   font-size: 22px;
-  font-weight: 500;
-  color: #0d0d0d;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
 }
+.content-small-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
 .modal .btn-close {
   position: absolute;
   right: 16px;
@@ -1802,39 +1831,34 @@ footer a:hover {
   margin-top: 40px;
 }
 /* account settings */
-.fm--settings {
-  justify-content: flex-start;
-}
-.fm--settings .form__col-left {
+.fm--leftpadding .form__col-left {
   flex-grow: 1;
 }
-.fm--settings .form__col-right {
+.fm--leftpadding .form__col-right {
   margin-left: 28px;
 }
 @media only screen and (max-width: 880px) {
-  .fm--settings .form__col-left {
+  .fm--leftpadding .form__col-left {
     order: 2;
   }
-  .fm--settings .form__col-right {
+  .fm--leftpadding .form__col-right {
     order: 1;
     margin-left: 0;
     margin-right: auto;
   }
 }
-.fm--settings .fm__form {
-  margin-top: -28px;
-  padding: 0 24px 0 128px;
-  background-color: transparent;
-  box-shadow: none;
+.fm--leftpadding .fm__contr {
+  max-width: 760px !important;
 }
-
-.fm--settings .fm__contr {
-  max-width: 760px;
-}
-.fm--settings .fm__form-inner {
+.fm--leftpadding .fm__form-inner {
   max-width: 100%;
 }
-.fm--settings .input-field {
+.fm--leftpadding .fm__form {
+  margin-top: -28px;
+  padding: 0 24px 0 128px;
+}
+
+.fm--leftpadding .input-field {
   margin-top: 28px;
   margin-bottom: 28px;
 }
@@ -1848,7 +1872,7 @@ footer a:hover {
   margin: auto;
 }
 @media only screen and (max-width: 768px) {
-  .fm--settings .fm__form {
+  .fm--leftpadding .fm__form {
     padding: 0 24px 0 24px;
   }
   .input-field__prefix {
@@ -1856,8 +1880,33 @@ footer a:hover {
     margin-bottom: 8px;
   }
 }
+
+.fm--settings {
+  justify-content: flex-start;
+}
+.fm--settings .fm__contr {
+  max-width: 360px;
+}
+.fm--settings .fm__form {
+  margin-top: -8px;
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+.fm--settings .fm__form-header {
+  text-align: left;
+  margin-bottom: 24px;
+}
 .fm--settings .fm__footer {
   align-items: flex-start;
+}
+.fm--settings .content-semi-title {
+  font-weight: 600;
+}
+.fm--settings .fm__form-subtitle {
+  line-height: 1.43;
+  letter-spacing: 0.2px;
+  color: #494c52;
 }
 .settigns__account {
   display: flex;
@@ -1880,5 +1929,150 @@ footer a:hover {
 .password-wrap:not(.show-change-password) .input-field:first-child {
   margin-top: 48px;
 }
+.fm + .team-members {
+  margin-top: 72px;
+}
+/* team members */
+.team-members {
+  max-width: 360px;
+}
+.member {
+  margin-bottom: 24px;
+}
 
+.member__ava {
+  width: 48px;
+  height: 48px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.member__ava img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.member__info {
+  margin-left: 16px;
+}
+.member__name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+.member__delete {
+  margin-left: 13px;
+}
+.member__email {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #494c52;
+}
+.member__position {
+  position: relative;
+  max-width: 110px;
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #09baa6;
+  text-transform: uppercase;
+}
+.member__position .select-wrapper input.select-dropdown {
+  border-bottom: none;
+  height: auto;
+  line-height: normal;
+  color: #09baa6;
+  font-size: inherit;
+  text-transform: inherit;
+  font-weight: inherit;
+}
+.member__position .select-wrapper input.select-dropdown:focus {
+  border-bottom: none;
+}
+.member__position .dropdown-content li > a,
+.member__position .dropdown-content li > span {
+  font-size: 12px;
+  color: #09baa6;
+  line-height: 1;
+  padding: 12px 10px;
+}
+.member__position .dropdown-content li {
+  min-height: 30px;
+}
+.member__position .select-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 7px;
+  fill: #09baa6;
+}
+.member__position .select-wrapper .caret {
+  opacity: 0;
+}
+/* end team members */
+/* checklist */
+
+.checklist-wrap {
+  margin-top: 48px;
+  max-width: 408px;
+  padding: 24px 42px 40px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px 0 rgba(25, 15, 0, 0.1);
+}
+.checklist__header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.checklist .content-semi-title {
+  margin-bottom: 10px;
+}
+.checklist__descr {
+  font-size: 16px;
+  line-height: 1.44;
+  letter-spacing: 0.3px;
+  color: #494c52;
+}
+.checklist__item {
+  display: flex;
+  margin: 18px 0;
+}
+.checklist__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  margin-top: 1px;
+  border-radius: 50%;
+  background-color: #09baa6;
+}
+.checklist__footer {
+  margin-top: 36px;
+}
+/* end checklist */
+
+.progress-wrap {
+  width: 100%;
+  margin: 26px 0 12px;
+  position: relative;
+  height: 24px;
+  border-radius: 3px;
+  background-color: rgba(239, 241, 243, 0.6);
+}
+
+.progress-bar {
+  background: #ddd;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  margin: 0;
+  border-radius: 4px;
+  background-color: #09baa6;
+  box-shadow: 0 3px 7px 0 rgba(32, 203, 184, 0.5);
+}
 /* end account settings */

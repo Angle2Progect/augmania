@@ -1,11 +1,10 @@
 $(document).ready(function() {
   $('.question').tooltip();
-  $(document).ready(function() {
-    $('.tabs').tabs();
-  });
+  $('.tabs').tabs();
   $('.modal').modal({
     opacity: 0.8
   });
+  $('select').formSelect();
   $('.top-search__input input').keyup(function(e) {
     if ($(this).val().length) {
       $(this)
@@ -73,4 +72,21 @@ function removeUpload() {
   $('.file-upload-input').replaceWith($('.file-upload-input').clone());
   $('.file-upload-content').hide();
   $('.image-upload-wrap').show();
+}
+
+// on page load...
+moveProgressBar();
+// on browser resize...
+$(window).resize(function() {
+  moveProgressBar();
+});
+
+// SIGNATURE PROGRESS
+function moveProgressBar() {
+  console.log('moveProgressBar');
+  var getPercent = $('.progress-wrap').data('progress-percent') / 100;
+  var getProgressWrapWidth = $('.progress-wrap').width();
+  var progressTotal = getPercent * getProgressWrapWidth;
+  $('.progress-bar').width(progressTotal);
+  console.log(progressTotal);
 }

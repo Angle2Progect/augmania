@@ -131,7 +131,7 @@
         </li>
       </ul>
       <div class="s-nav__upgrade">
-        <a class="waves-effect waves-light button button--emptygreen">Upgrade</a>
+        <a href="profile-settings.html" class="waves-effect waves-light button button--emptygreen">Upgrade</a>
       </div>
       <div class="s-nav__help">
         <span>Do you need help</span>
@@ -156,14 +156,14 @@
           <div class="tabs-nav">
             <ul class="tabs">
               <li class="tab"><a href="#planCard1">Account Information</a></li>
-              <li class="tab"><a href="#planCard2" class="active">Plan and Billing</a></li>
-              <li class="tab"><a href="#planCard3">Team</a></li>
+              <li class="tab"><a href="#planCard2">Plan and Billing</a></li>
+              <li class="tab"><a href="#planCard3" class="active">Team</a></li>
             </ul>
           </div>
           <div class="tabs__body">
             <!-- Tab 1 -->
             <div id="planCard1">
-              <div class="fm fm--settings">
+              <div class="fm fm--settings fm--leftpadding">
                 <div class="fm__contr">
                   <div class="fm__form">
                     <div class="fm__form-inner">
@@ -320,68 +320,164 @@
             </div>
             <!-- Tab 3 -->
             <div id="planCard3">
-              <div class="fm fm--settings">
-                <div class="fm__contr">
-                  <div class="fm__form">
-                    <div class="fm__form-inner">
-                      <form>
-                        <div class="input-field">
-                          <p class="input-field__prefix">Name</p>
-                          <input type="text" class="validate" value="John Sipmson">
-                          <span class="helper-text" data-error="This name contains invalid symbols."></span>
+              <div class="row justify-content-between">
+                <div class="column">
+                  <div class="fm fm--settings">
+                    <div class="fm__contr">
+                      <div class="fm__form">
+                        <div class="fm__form-inner">
+                          <div class="fm__form-header">
+                            <h3 class="content-semi-title">Invite team members</h3>
+                            <p class="fm__form-subtitle">You can make a free team for up to 400 members (including
+                              yourself). Upgrade to Augmania for Work to unlock all team functionality and benefits.</p>
+                          </div>
+                          <form>
+                            <div class="input-field">
+                              <input type="text" class="validate" placeholder="Email address">
+                              <span class="helper-text" data-error="This name contains invalid symbols."></span>
+                            </div>
+                            <div class="input-field">
+                              <input type="text" class="validate" placeholder="Email address">
+                              <span class="helper-text" data-error="This name contains invalid symbols."></span>
+                            </div>
+                            <div class="input-field">
+                              <input type="email" class="validate" placeholder="Email address">
+                              <span class="helper-text" data-error="This mail adress not valid."></span>
+                            </div>
+
+                            <div class="fm__footer">
+                              <button type="submit" class="button button--red  waves-effect waves-light">Send
+                                invitations</button>
+                            </div>
+                          </form>
+
                         </div>
-                        <div class="input-field">
-                          <p class="input-field__prefix">Organization</p>
-                          <input type="text" class="validate" value="H&M">
-                          <span class="helper-text" data-error="This name contains invalid symbols."></span>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="team-members">
+                    <h3 class="content-small-title">Team members</h3>
+                    <ul class="members-list">
+                      <li class="member">
+                        <div class="row">
+                          <div class="member__ava">
+                            <img src="./img/avatar.jpg" alt="Avatar">
+                          </div>
+                          <div class="member__info">
+                            <h5 class="member__name">John Simpson</h5>
+                            <p class="member__email">johnsimpson@gmail.com</p>
+                            <div class="member__position">OWNER</div>
+                          </div>
                         </div>
-                        <div class="input-field">
-                          <p class="input-field__prefix">Email</p>
-                          <input type="email" class="validate" value="johnsimpson@gmail.com">
-                          <span class="helper-text" data-error="This mail adress not valid."></span>
-                        </div>
-                        <div class="password-wrap">
-                          <div class="input-field will-hide">
-                            <p class="input-field__prefix">Password</p>
-                            <button type="button" class="button redtext" id="btnChangePassword">
-                              <svg class="icon icon-edit">
-                                <use xlink:href="img/sprite.svg#icon-edit"></use>
+                      </li>
+                      <li class="member">
+                        <div class="row">
+                          <div class="member__ava">
+                            <img src="./img/avatar.jpg" alt="Avatar">
+                          </div>
+                          <div class="member__info">
+                            <div class="row">
+                              <h5 class="member__name">Sarah Miller</h5>
+                              <button class="button member__delete greytext ">
+                                <svg class="icon icon-delete">
+                                  <use xlink:href="img/sprite.svg#icon-delete"></use>
+                                </svg>
+                              </button>
+                            </div>
+                            <p class="member__email">sarahmiller@gmail.com</p>
+                            <div class="member__position">
+                              <select>
+                                <option value="" selected>TEAM MEMBER</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                              </select>
+                              <svg class="select-icon icon icon-down">
+                                <use xlink:href="img/sprite.svg#icon-down"></use>
                               </svg>
-                              <span>Change Password</span>
-                            </button>
-                          </div>
-                          <div class="input-field">
-                            <p class="input-field__prefix">Password</p>
-                            <input type="password" class="validate" placeholder="Type your current password">
-                            <span class="helper-text" data-error="The password must be at least 8 characters"></span>
-                          </div>
-                          <div class="input-field">
-                            <input type="password" class="validate" placeholder="Type your new password">
-                            <span class="helper-text" data-error="The password must be at least 8 characters"></span>
+                            </div>
                           </div>
                         </div>
-                        <div class="fm__footer">
-                          <button type="submit" class="button button--red  waves-effect waves-light">Save changes</button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="row justify-content-end">
+                    <button type="button" class="button button--red  waves-effect waves-light">Create a new
+                  </div>
+                  <div class="checklist-wrap">
+                    <div class="checklist">
+                      <div class="checklist__header">
+                        <h3 class="content-semi-title">Upgrade your account</h3>
+                        <p>You are on Augmania Pro plan</p>
+                        <div class="progress-wrap" data-progress-percent="25">
+                          <div class="progress-bar progress"></div>
                         </div>
-                      </form>
-                      <div class="settigns__account">
-                        <button class="button greytext">
-                          <svg class="icon icon-log-out">
-                            <use xlink:href="img/sprite.svg#icon-log-out"></use>
-                          </svg>
-                          <span>Log Out</span>
-                        </button>
-                        <button class="button redtext">
-                          <svg class="icon icon-delete">
-                            <use xlink:href="img/sprite.svg#icon-delete"></use>
-                          </svg>
-                          <span>Delete account</span>
-                        </button>
+                        <p>1/20 team members invited</p>
+                      </div>
+                      <p class="checklist__descr">Upgrade to Augmania Interprise and get the
+                        ability to:</p>
+                      <ul class="checklist__linstings">
+                        <li class="checklist__item">
+                          <span class="checklist__icon">
+                            <svg class="icon icon-tick">
+                              <use xlink:href="img/sprite.svg#icon-tick"></use>
+                            </svg>
+                          </span>
+                          <span>Build your Brand Kit for your team to use</span>
+                        </li>
+                        <li class="checklist__item">
+                          <span class="checklist__icon">
+                            <svg class="icon icon-tick">
+                              <use xlink:href="img/sprite.svg#icon-tick"></use>
+                            </svg>
+                          </span>
+                          <span>Upload your own fonts to share</span>
+                        </li>
+                        <li class="checklist__item">
+                          <span class="checklist__icon">
+                            <svg class="icon icon-tick">
+                              <use xlink:href="img/sprite.svg#icon-tick"></use>
+                            </svg>
+                          </span>
+                          <span>Manage your brand by creating your own
+                            templates</span>
+                        </li>
+                        <li class="checklist__item">
+                          <span class="checklist__icon">
+                            <svg class="icon icon-tick">
+                              <use xlink:href="img/sprite.svg#icon-tick"></use>
+                            </svg>
+                          </span>
+                          <span>Add more team members (pay per user)</span>
+                        </li>
+                        <li class="checklist__item">
+                          <span class="checklist__icon">
+                            <svg class="icon icon-tick">
+                              <use xlink:href="img/sprite.svg#icon-tick"></use>
+                            </svg>
+                          </span>
+                          <span>Organize your images and designs into folders </span>
+                        </li>
+                        <li class="checklist__item">
+                          <span class="checklist__icon">
+                            <svg class="icon icon-tick">
+                              <use xlink:href="img/sprite.svg#icon-tick"></use>
+                            </svg>
+                          </span>
+                          <span>Resize your designs easily with one click</span>
+                        </li>
+                      </ul>
+                      <div class="checklist__footer">
+                        <div class="row justify-content-center">
+                          <a href="#" class="waves-effect waves-light button button--emptyred">Upgrade</a>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
