@@ -1,0 +1,253 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+
+  <!-- All icons from sprite.svg require a server for displaying. -->
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <header class="t-header">
+    <div class="content__row justify-content-between align-items-center">
+      <div class="t-header__logobox">
+        <img src="./img/logo.svg" class="header__logo" alt="Augmania">
+      </div>
+      <div class="t-header__bar">
+        <div class="content__row align-items-center">
+          <div class="t-header__campaign-ava"><img src="./img/rexona-logo.jpg" alt="Rexona"></div>
+          <p>New Rexona campaign</p>
+        </div>
+        <div class="t-header__lastsave">Last save 30 seconds ago</div>
+        <nav class="t-header__nav">
+          <a href="#" class="t-header__nav-link">Save as a Draft</a>
+          <a href="#" class="t-header__nav-link">Preview</a>
+          <a href="#" class="t-header__nav-link">Help</a>
+          <a href="#modalshareCampaign" class="t-header__nav-link redtext">Share</a>
+        </nav>
+        <a href="#modalPublishCampaign" class="button button--red modal-trigger waves-effect waves-light">Publish
+          campaign</a>
+      </div>
+    </div>
+  </header>
+  <aside class="sidebar scroll-y gap-for-header">
+    <div class="t-steps">
+      <h2 class="t-steps__title">Template Steps:</h2>
+      <ul class="t-steps__list">
+        <li>
+          <h5 class="t-step__stage">Step 1</h5>
+          <ul class="t-step__innerlist">
+            <li class="is-active">
+              <p class="t-step__name">Trigger 1</p>
+            </li>
+            <li>
+              <p class="t-step__name">Showing Media 1</p>
+            </li>
+            <li>
+              <p class="t-step__name">Interaction 1</p>
+            </li>
+            <li>
+              <p class="t-step__name">CTA 1</p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h5 class="t-step__stage">Step 2</h5>
+          <ul class="t-step__innerlist">
+            <li>
+              <p class="t-step__name">Trigger 1</p>
+            </li>
+            <li>
+              <p class="t-step__name">Trigger 1</p>
+            </li>
+            <li>
+              <p class="t-step__name">Showing Media 1</p>
+            </li>
+            <li>
+              <p class="t-step__name">Interaction 1</p>
+            </li>
+            <li>
+              <p class="t-step__name">CTA 1</p>
+            </li>
+            <li>
+              <p class="t-step__name">CTA 2</p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h5 class="t-step__stage">Step 3</h5>
+          <ul class="t-step__innerlist">
+            <li>
+              <p class="t-step__name">Trigger 1</p>
+            </li>
+            <li>
+              <p class="t-step__name">Trigger 1</p>
+            </li>
+            <li>
+              <p class="t-step__name">Showing Media 1</p>
+            </li>
+            <li>
+              <p class="t-step__name">Interaction 1</p>
+            </li>
+            <li>
+              <p class="t-step__name">CTA 1</p>
+            </li>
+            <li>
+              <p class="t-step__name">CTA 2</p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h5 class="t-step__stage">Step 4</h5>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <main class="main main--t">
+    <div class="main-content">
+      <div class="t-workarea">
+        <div class="t_view">
+          <div class="t-whitespace">
+            <div class="t-whitespace__pic"><img src="./img/template.jpg" alt="Template ing"></div>
+            <div class="t-whitespace__footer">
+              <div class="content__row justify-content-between">
+                <div class="content__row">
+                  <button class="t-circle-button">
+                    <svg class="icon icon-undo">
+                      <use xlink:href="img/sprite.svg#icon-undo"></use>
+                    </svg>
+                    <span>Undo</span>
+                  </button>
+                  <button class="t-circle-button">
+                    <svg class="icon icon-redo">
+                      <use xlink:href="img/sprite.svg#icon-redo"></use>
+                    </svg>
+                    <span>Redo</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content__row justify-content-center">
+            <button class="btn-history">
+              <svg class="icon icon-chevron-left">
+                <use xlink:href="img/sprite.svg#icon-chevron-left"></use>
+              </svg>
+              <span>Previous</span>
+            </button>
+            <button class="btn-history">
+              <span>Next</span>
+              <svg class="icon icon-chevron-left icon-chevron-right">
+                <use xlink:href="img/sprite.svg#icon-chevron-left"></use>
+              </svg>
+            </button>
+
+          </div>
+        </div>
+        <aside class="t-sidebar">
+          <div class="t-sidebar__inner">
+            <div class="fm__select">
+              <select>
+                <option value="" selected>Double tap</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+              <svg class="select-icon icon icon-down">
+                <use xlink:href="img/sprite.svg#icon-down"></use>
+              </svg>
+            </div>
+            <div class="t-sidebar__checkboxes">
+              <div class="input-field">
+                <label>
+                  <input type="checkbox" class="">
+                  <span>Always show media</span>
+                </label>
+              </div>
+              <div class="input-field">
+                <label>
+                  <input type="checkbox" class="">
+                  <span>Only on top of object</span>
+                </label>
+              </div>
+            </div>
+            <button class="button button--red waves-effect waves-light">Upload image</button>
+            <button class="waves-effect waves-light button button--emptygreen">Choose from assets</button>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer__inner">
+      <div>© 2018 Augmania</div>
+      <div>
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Structure -->
+  <div id="modalPublishCampaign" class="modal modal--480">
+    <div class="modal-content">
+      <div class="fm">
+        <span class="btn-close modal-close">
+          <svg class="icon icon-close">
+            <use xlink:href="img/sprite.svg#icon-close"></use>
+          </svg>
+        </span>
+        <div class="fm__contr">
+          <div class="fm__form">
+            <div class="fm__form-inner">
+              <div class="fm__form-header">
+                <img src="./img/logo.svg" alt="Augmania" class="main-logo">
+                <h3 class="content__title">Your campaign published!</h3>
+                <p>Share it with your customers!</p>
+              </div>
+              <div class="fm__footer">
+                <button type="button" class="button button--red waves-effect waves-light">Share a campaign</button>
+              </div>
+            </div>
+            <div class="copy-field">
+              <div class="content__row align-items-center justify-content-between">
+                <span class="copy__path greytext">aug.man/campaignurladress</span>
+                <button class="copy__btn greytext">
+                  <svg class="icon icon-copy">
+                    <use xlink:href="img/sprite.svg#icon-copy"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+
+  <script src="js/vendor/materialize.min.js"></script>
+  <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
