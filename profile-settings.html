@@ -163,12 +163,12 @@
           <div class="tabs__body">
             <!-- Tab 1 -->
             <div id="planCard1">
-              <div class="fm fm--settings fm--leftpadding">
+              <div class="fm fm--settings">
                 <div class="fm__contr">
                   <div class="fm__form">
                     <div class="fm__form-inner">
                       <form>
-                        <div class="row justify-content-between">
+                        <div class="content__row justify-content-between">
                           <div class="form__col-left">
                             <div class="input-field">
                               <p class="input-field__prefix">Name</p>
@@ -326,7 +326,7 @@
                     </div>
                   </div>
                   <div class="card__bottom">
-                    <div class="row justify-content-between">
+                    <div class="content__row justify-content-between">
                       <div class="column">
                         <p class="card__label">Expires</p>
                         <div class="card__field">11/21</div>
@@ -338,16 +338,16 @@
                     </div>
                   </div>
                 </div>
-                <div class="row justify-content-end"><a href="#" class="waves-effect waves-light button button--emptygreen">Edit
+                <div class="content__row justify-content-end"><a href="#" class="waves-effect waves-light button button--emptygreen">Edit
                     Payment Method</a></div>
 
               </div>
             </div>
             <!-- Tab 3 -->
             <div id="planCard3">
-              <div class="row justify-content-between">
+              <div class="content__row justify-content-between">
                 <div class="column">
-                  <div class="fm fm--settings">
+                  <div class="fm fm--team">
                     <div class="fm__contr">
                       <div class="fm__form">
                         <div class="fm__form-inner">
@@ -369,10 +369,11 @@
                               <input type="email" class="validate" placeholder="Email address">
                               <span class="helper-text" data-error="This mail adress not valid."></span>
                             </div>
-
                             <div class="fm__footer">
-                              <button type="submit" class="button button--red  waves-effect waves-light">Send
-                                invitations</button>
+                              <div class="content__row">
+                                <button type="submit" class="button button--red  waves-effect waves-light">Send
+                                  invitations</button>
+                              </div>
                             </div>
                           </form>
 
@@ -385,7 +386,7 @@
                     <h3 class="content-small-title">Team members</h3>
                     <ul class="members-list">
                       <li class="member">
-                        <div class="row">
+                        <div class="content__row">
                           <div class="member__ava">
                             <img src="./img/avatar.jpg" alt="Avatar">
                           </div>
@@ -397,12 +398,12 @@
                         </div>
                       </li>
                       <li class="member">
-                        <div class="row">
+                        <div class="content__row">
                           <div class="member__ava">
                             <img src="./img/avatar.jpg" alt="Avatar">
                           </div>
                           <div class="member__info">
-                            <div class="row">
+                            <div class="content__row">
                               <h5 class="member__name">Sarah Miller</h5>
                               <button class="button member__delete greytext ">
                                 <svg class="icon icon-delete">
@@ -429,7 +430,7 @@
                   </div>
                 </div>
                 <div class="column">
-                  <div class="row justify-content-end">
+                  <div class="content__row justify-content-end">
                     <button type="button" class="button button--red  waves-effect waves-light">Create a new
                   </div>
                   <div class="checklist-wrap">
@@ -496,7 +497,7 @@
                         </li>
                       </ul>
                       <div class="checklist__footer">
-                        <div class="row justify-content-center">
+                        <div class="content__row justify-content-center">
                           <a href="#" class="waves-effect waves-light button button--emptyred">Upgrade</a>
                         </div>
                       </div>
@@ -536,7 +537,7 @@
                 <h4 class="content-semi-title">Add your campaign info</h4>
               </div>
               <form>
-                <div class="row row-fileupload">
+                <div class="content__row row-fileupload">
                   <div class="input-field">
                     <input type="text" placeholder="Campaign title" class="validate">
                     <span class="helper-text" data-error="This name contains invalid symbols."></span>
@@ -560,7 +561,7 @@
                   <span class="helper-text" data-error="This name contains invalid symbols."></span>
                 </div>
                 <div class="fm__switch">
-                  <div class="row justify-content-center">
+                  <div class="content__row justify-content-center">
                     <p class="switch__caption">Choose a display sequence</p>
                     <span class="question tooltip" data-position="right" data-tooltip="I am a tooltip">
                       <svg class="icon icon-info">
@@ -568,7 +569,7 @@
                       </svg>
                     </span>
                   </div>
-                  <div class="row  justify-content-center">
+                  <div class="content__row  justify-content-center">
                     <div class="switch">
                       <label>
                         <span class="switch__value">Sequential</span>
@@ -586,7 +587,7 @@
               </form>
             </div>
             <div class="fm__footer">
-              <div class="row align-items-baseline">
+              <div class="content__row align-items-baseline">
                 <p>Do you want create from template?</p>
                 <a href="#" class="login redtext">Create</a>
               </div>
