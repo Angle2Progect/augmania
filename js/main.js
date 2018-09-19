@@ -24,18 +24,6 @@ $(document).ready(function() {
     $('.sidebar').toggleClass('dropdown-active');
   });
 
-  // toggle switcher label color
-  $('.switch').on('click', function() {
-    if (
-      $(this)
-        .find('input')
-        .is(':checked')
-    ) {
-      $(this).addClass('turned-on');
-    } else {
-      $(this).removeClass('turned-on');
-    }
-  });
   // show change password inputs
   $('#btnChangePassword').on('click', function() {
     $(this)

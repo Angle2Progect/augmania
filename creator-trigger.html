@@ -1,0 +1,373 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+
+  <!-- All icons from sprite.svg require a server for displaying. -->
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <header class="t-header">
+    <div class="content__row justify-content-between align-items-center">
+      <div class="t-header__logobox content__row justify-content-center">
+        <a href="/"><img src="./img/logo-with-label.svg" class="header__logo" alt="Augmania"></a>
+      </div>
+      <div class="t-header__bar">
+        <div class="content__row align-items-center">
+          <div class="t-header__campaign-ava"><img src="./img/rexona-logo.jpg" alt="Rexona"></div>
+          <p>New Rexona campaign</p>
+        </div>
+        <div class="t-header__lastsave">Last save 30 seconds ago</div>
+        <nav class="t-header__nav">
+          <a href="#" class="t-header__nav-link">Save as a Draft</a>
+          <a href="#modalPreviewCampaign" class="t-header__nav-link modal-trigger">Preview</a>
+          <a href="#" class="t-header__nav-link">Help</a>
+          <a href="#modalShareCampaign" class="t-header__nav-link modal-trigger redtext">Share</a>
+        </nav>
+        <a href="#modalPublishCampaign" class="button button--red modal-trigger waves-effect waves-light">Publish
+          campaign</a>
+      </div>
+    </div>
+  </header>
+  <aside class="sidebar scroll-y gap-for-header">
+    <div class="creator-types">
+      <ul class="types__list">
+        <li class="types__item is-active">
+          <button class="button types__btn">
+            <span class="types__number">1</span>
+            <span class="types__name">Assign triger</span>
+          </button>
+        </li>
+        <li class="types__item">
+          <button class="button types__btn">
+            <span class="types__number">2</span>
+            <span class="types__name">Showing Media</span>
+          </button>
+        </li>
+        <li class="types__item">
+          <button class="button types__btn">
+            <span class="types__number">3</span>
+            <span class="types__name">Show Interaction</span>
+          </button>
+        </li>
+        <li class="types__item">
+          <button class="button types__btn">
+            <span class="types__number">4</span>
+            <span class="types__name">Call to Action</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <main class="main main--t">
+    <div class="main-content">
+      <div class="t-slide">
+        <div class="t-workarea">
+          <div class="t-tabs-wrap">
+            <div class="t-tabs__nav">
+              <ul class="tabs">
+                <li class="tab">
+                  <a href="#creatorTab1" class="active">
+                    <svg class="icon icon-image">
+                      <use xlink:href="img/sprite.svg#icon-image"></use>
+                    </svg>
+                    <span>Image</span>
+                  </a>
+                </li>
+                <li class="tab">
+                  <a href="#creatorTab2">
+                    <svg class="icon icon-location">
+                      <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <span>Location</span>
+                  </a>
+                </li>
+                <li class="tab">
+                  <a href="#creatorTab3">
+                    <svg class="icon icon-qr-code">
+                      <use xlink:href="img/sprite.svg#icon-qr-code"></use>
+                    </svg>
+                    <span>QR code</span>
+                  </a>
+                </li>
+                <li class="tab">
+                  <a href="#creatorTab4">
+                    <svg class="icon icon-nothing">
+                      <use xlink:href="img/sprite.svg#icon-nothing"></use>
+                    </svg>
+                    <span>Nothing</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div id="creatorTab1" class="t-tabs__body">
+              <div class="t-tabs__content">
+                <div class="t-filter-bar">
+                  <div class="t-search">
+                    <input type="search" placeholder="Search a free image">
+                    <svg class="t-search-icon icon icon-search">
+                      <use xlink:href="img/sprite.svg#icon-search"></use>
+                    </svg>
+                  </div>
+                  <div class="t-object">
+                    <h3 class="content-small-title">My recent assets</h3>
+                    <div class="t-object__listings">
+                      <div class="t-object__item"><img src="./img/preview-pic.jpg" alt="Oject Image"></div>
+                      <div class="t-object__item"><img src="./img/preview-pic.jpg" alt="Oject Image"></div>
+                      <div class="t-object__item"><img src="./img/preview-pic.jpg" alt="Oject Image"></div>
+                      <div class="t-object__item"><img src="./img/preview-pic.jpg" alt="Oject Image"></div>
+                      <div class="t-object__item"><img src="./img/preview-pic.jpg" alt="Oject Image"></div>
+                      <div class="t-object__item"><img src="./img/preview-pic.jpg" alt="Oject Image"></div>
+                    </div>
+                    <div class="content__row justify-content-end"><button class="t-object__show-all">All assets</button></div>
+                  </div>
+                  <div class="content__row justify-content-center">
+                    <button type="button" class="waves-effect waves-light button button--emptygreen">
+                      <div class="file-field input-field">
+                        <div class="btn">
+                          <span>Upload from
+                            computer</span>
+                          <input type="file">
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+                <div class="t-view">
+                  <div class="t-whitespace">
+                    <div class="t-whitespace__pic"></div>
+                    <div class="t-whitespace__footer">
+                      <div class="content__row justify-content-between">
+                        <div class="content__row">
+                          <button class="t-circle-button">
+                            <svg class="icon icon-undo">
+                              <use xlink:href="img/sprite.svg#icon-undo"></use>
+                            </svg>
+                            <span>Undo</span>
+                          </button>
+                          <button class="t-circle-button">
+                            <svg class="icon icon-redo">
+                              <use xlink:href="img/sprite.svg#icon-redo"></use>
+                            </svg>
+                            <span>Redo</span>
+                          </button>
+                        </div>
+                        <button class="t-circle-button t-circle-button--add">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="t-control">
+                  <div class="t-control__item">
+                    <button class="t-control__chevron t-control__up"></button>
+                  </div>
+                  <div class="t-control__item">
+                    <div class="t-control__step-number">
+                      <span>1</span>
+                      <span class="t-control__label">Step</span>
+                    </div>
+                  </div>
+                  <div class="t-control__item">
+                    <button class="t-control__btn">
+                      <svg class="icon icon-delete">
+                        <use xlink:href="img/sprite.svg#icon-delete"></use>
+                      </svg>
+                      <span class="t-control__label">Delete</span>
+                    </button>
+                  </div>
+                  <div class="t-control__item">
+                    <button class="t-control__btn">
+                      <svg class="icon icon-save">
+                        <use xlink:href="img/sprite.svg#icon-save"></use>
+                      </svg>
+                      <span class="t-control__label">Save</span>
+                    </button>
+                  </div>
+                  <div class="t-control__item">
+                    <button class=" t-control__chevron t-control__down"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="creatorTab2" class="t-tabs__body">creatorTab 2</div>
+            <div id="creatorTab3" class="t-tabs__body">creatorTab 3</div>
+            <div id="creatorTab4" class="t-tabs__body">creatorTab 4</div>
+          </div>
+          <aside class="ts-steps">
+            <h5 class="ts-steps__title">Campaign Steps:</h5>
+            <ul class="ts-steps__list">
+              <li class="is-active">
+                <button class="ts-steps__btn">Step 1</button>
+              </li>
+              <li>
+                <button class="ts-steps__btn">Step 2</button>
+              </li>
+              <li>
+                <button class="ts-steps__btn">Step 3</button>
+              </li>
+              <li>
+                <button class="ts-steps__btn">Step 4</button>
+              </li>
+            </ul>
+          </aside>
+        </div>
+        <div class="t-add-slide content__row justify-content-end">
+          <button type="button" class="waves-effect waves-light button button--emptygreen">Add a new slide</button>
+        </div>
+
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer__inner">
+      <div>© 2018 Augmania</div>
+      <div>
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Structure -->
+  <div id="modalPublishCampaign" class="modal modal--480">
+    <div class="modal-content">
+      <div class="fm">
+        <span class="btn-close modal-close">
+          <svg class="icon icon-close">
+            <use xlink:href="img/sprite.svg#icon-close"></use>
+          </svg>
+        </span>
+        <div class="fm__contr">
+          <div class="fm__form">
+            <div class="fm__form-inner">
+              <div class="fm__form-header">
+                <img src="./img/logo.svg" alt="Augmania" class="main-logo">
+                <h3 class="content__title">Your campaign published!</h3>
+                <p>Share it with your customers!</p>
+              </div>
+              <div class="fm__footer">
+                <button type="button" class="button button--red waves-effect waves-light">Share a campaign</button>
+              </div>
+            </div>
+            <div class="copy-field">
+              <div class="content__row align-items-center justify-content-between">
+                <span class="copy__path greytext">aug.man/campaignurladress</span>
+                <button class="copy__btn greytext">
+                  <svg class="icon icon-copy">
+                    <use xlink:href="img/sprite.svg#icon-copy"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="modalShareCampaign" class="modal">
+    <div class="modal-content">
+      <div class="fm">
+        <span class="btn-close modal-close">
+          <svg class="icon icon-close">
+            <use xlink:href="img/sprite.svg#icon-close"></use>
+          </svg>
+        </span>
+        <div class="fm__contr">
+          <div class="fm__form">
+            <div class="fm__form-inner">
+              <div class="fm__form-header">
+                <h4 class="content-semi-title">Sharing Settings</h4>
+              </div>
+              <form>
+                <div class="input-field">
+                  <input type="text" placeholder="Type the campaign heading" class="validate">
+                  <span class="helper-text" data-error="This name contains invalid symbols."></span>
+                </div>
+                <div class="input-field">
+                  <input type="text" placeholder="Type a short description" class="validate">
+                  <span class="helper-text" data-error="This name contains invalid symbols."></span>
+                </div>
+                <div class="file-field input-field">
+                  <div class="upload-button">
+                    <span>
+                      <svg class="icon icon-image-red">
+                        <use xlink:href="img/sprite.svg#icon-image-red"></use>
+                      </svg>
+                    </span>
+                    <input type="file">
+                  </div>
+                  <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text" placeholder="Upload a preview image" readonly>
+                  </div>
+                </div>
+                <div class="social">
+                  <h5 class="social__caption content-small-title">Choose a social media to share</h5>
+                  <div class="content__row justify-content-center">
+                    <button class="button button-social button-social--facebook">
+                      <svg class="icon icon-facebook">
+                        <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                      </svg>
+                    </button>
+                    <button class="button button-social button-social--twitter">
+                      <svg class="icon icon-twitter">
+                        <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                      </svg>
+                    </button>
+                    <button class="button button-social button-social--instagram">
+                      <svg class="icon icon-instagram">
+                        <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="fm__footer">
+                  <button type="submit" class="button button--red waves-effect waves-light">Share a
+                    Campaign</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="modalPreviewCampaign" class="modal modal--preview">
+    <div class="modal-content">
+      <button type="submit" class="btn-close modal-close button button--red waves-effect waves-light">Back
+        to campaign</button>
+      <img src="./img/preview-pic.jpg" alt="Preview picture" class="modal-preview-photo">
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+
+  <script src="js/vendor/materialize.min.js"></script>
+  <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
