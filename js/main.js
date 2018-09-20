@@ -71,10 +71,16 @@ $(window).resize(function() {
 
 // SIGNATURE PROGRESS
 function moveProgressBar() {
-  console.log('moveProgressBar');
   var getPercent = $('.progress-wrap').data('progress-percent') / 100;
   var getProgressWrapWidth = $('.progress-wrap').width();
   var progressTotal = getPercent * getProgressWrapWidth;
   $('.progress-bar').width(progressTotal);
-  console.log(progressTotal);
 }
+
+var color_picker = document.querySelectorAll('.color-picker');
+color_picker.forEach(function(item, i, arr) {
+  item.parentNode.style.backgroundColor = item.value;
+  item.addEventListener('change', function() {
+    item.parentNode.style.backgroundColor = item.value;
+  });
+});

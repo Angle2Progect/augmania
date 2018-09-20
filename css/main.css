@@ -1286,8 +1286,9 @@ footer a:hover {
 }
 
 @media only screen and (min-width: 1180px) {
-  .fm-regpage .fm {
+  .fm-regpage.fm {
     justify-content: center;
+    align-items: center;
   }
   .fm-regpage .fm__contr {
     margin-left: -580px;
@@ -1356,9 +1357,10 @@ footer a:hover {
   background-size: 16px 16px;
   background-position: 96% 55%;
 }
-.fm input:hover,
-.fm input:focus {
+input:hover,
+input:focus {
   border-color: #8191ac !important;
+  box-shadow: none !important;
 }
 
 .fm .input-field label {
@@ -1506,6 +1508,30 @@ footer a:hover {
   text-transform: uppercase;
 }
 /* end input file upload */
+/* input color picker */
+input[type='color']::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+input[type='color']::-webkit-color-swatch {
+  border: none;
+}
+input[type='color'].color-picker {
+  opacity: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 32px;
+  border: none;
+}
+.color-picker-wrapper {
+  display: block;
+  height: 32px;
+  border-radius: 3px;
+}
+.color-picker-wrapper {
+  border: solid 2px #8191ac;
+}
+/* end input color picker */
 .cirlce {
   display: flex;
   justify-content: center;
@@ -2581,7 +2607,7 @@ footer a:hover {
   background-color: #fff;
   padding: 16px 0 12px;
   margin-bottom: 20px;
-  min-height: 70vh;
+  min-height: 82vh;
 }
 .t-whitespace .t-search {
   max-width: 235px;
@@ -2613,11 +2639,11 @@ footer a:hover {
 .t-whitespace__footer .content__row {
   width: auto;
 }
-.t-whitespace .input-field {
+.t-workarea .input-field {
   flex-grow: 1;
   margin: 16px 0;
 }
-.t-whitespace input:not([type='search']) {
+.t-workarea input[type='text'] {
   height: 40px !important;
   padding: 8px 16px !important;
 }
@@ -2719,6 +2745,7 @@ footer a:hover {
 .t-checkboxes {
   margin: 24px 0 32px;
 }
+
 .t-checkboxes .input-field {
   margin-top: 16px;
   margin-bottom: 16px;
@@ -2764,7 +2791,6 @@ footer a:hover {
   color: #fff;
   box-sizing: border-box;
 }
-
 .t-search input::placeholder {
   color: #cacfd7;
 }
@@ -3073,6 +3099,16 @@ footer a:hover {
 .t-filter-bar > .fm__select:first-child {
   margin-bottom: 16px;
 }
+.t-filter-bar .t-input input {
+  margin: 0;
+  box-sizing: border-box;
+  color: #fff;
+  border: 1px solid #8191ac;
+  border-radius: 3px;
+}
+.t-filter-bar .t-input input::placeholder {
+  color: #8191ac;
+}
 .t-filter__nothing {
   max-width: 200px;
   margin: 50px auto;
@@ -3222,7 +3258,7 @@ footer a:hover {
   box-shadow: none;
 }
 .t-mockup {
-  margin-right: 59px;
+  margin: 16px auto 24px;
   text-align: center;
 }
 .t-mockup__device {
@@ -3232,5 +3268,15 @@ footer a:hover {
   border-radius: 16px;
   background-color: #ffffff;
   border: solid 1px #8191ac;
+}
+
+.t-btn-styles__item {
+  margin-bottom: 24px;
+}
+.t-btn-styles .color-picker-wrapper {
+  margin-top: 16px;
+}
+.t-btn-styles h5 {
+  color: #fff;
 }
 /* end Creator */
