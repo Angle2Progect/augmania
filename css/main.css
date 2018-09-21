@@ -16,7 +16,10 @@ body {
   background-color: #fdfdfd;
   width: 100%;
 }
-
+/* /Just add to body class '.all-events-disabled' to disable all events */
+.all-events-disabled {
+  pointer-events: none;
+}
 /* ==========================================================================
        font-family: 'Roboto', sans-serif;
        font-family: 'Poppins', sans-serif;
@@ -473,6 +476,19 @@ button:active {
 .button--emptygreen:active {
   color: #08a896;
   border-color: #08a896;
+}
+.button--emptygrey {
+  height: 32px;
+  border-radius: 16px;
+  border: solid 1px #8191ac;
+  background-color: transparent;
+  color: #8191ac;
+}
+.button--emptygrey:hover,
+.button--emptygrey:focus,
+.button--emptygrey:active {
+  color: #384c6a;
+  border-color: #384c6a;
 }
 .button--emptyred {
   height: 56px;
@@ -2635,16 +2651,24 @@ input[type='color'].color-picker {
   margin-bottom: 20px;
   min-height: 82vh;
 }
-.t-whitespace .t-whitespace__location-search {
-  max-width: 280px;
+.t-location-search {
+  display: flex;
+  align-items: flex-end;
+  max-width: 360px;
+  width: 100%;
   margin: 0 auto;
 }
-/* .t-whitespace .t-whitespace__location-search {
-  max-width: 480px;
-  margin: 0 auto;
-} */
+.t-location-search .t-search {
+  margin-right: 24px;
+}
+.t-location-search .button {
+  max-width: 100px;
+  height: 32px !important;
+  font-weight: 500;
+}
 .t-whitespace .t-search input[type='search'] {
   color: #384c6a;
+  border-color: #8191ac !important;
 }
 .t-whitespace .t-search input[type='search']::placeholder {
   color: #8191ac;
@@ -3299,7 +3323,12 @@ input[type='color'].color-picker {
   background-color: #ffffff;
   border: solid 1px #8191ac;
 }
-
+.t-mockup .drag-item {
+  height: 32px;
+  margin: 16px;
+  border-radius: 8px;
+  border: solid 1px #8191ac;
+}
 .t-btn-styles__item {
   margin-bottom: 24px;
 }

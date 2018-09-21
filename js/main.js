@@ -87,9 +87,11 @@ color_picker.forEach(function(item) {
 });
 
 // Drag and Drop via Dragula https://github.com/bevacqua/dragula
-var dragContainer = document.getElementById('dragContainer');
-if (dragContainer) {
-  dragula([document.getElementById('dragContainer')])
+var dragContainers = document.querySelectorAll('.dragContainer');
+let dragContainersArray = Array.from(dragContainers);
+
+if (dragContainersArray) {
+  dragula(dragContainersArray)
     .on('drag', function(el) {
       // add 'is-moving' class to element being dragged
       el.classList.add('is-moving');
@@ -107,5 +109,3 @@ if (dragContainer) {
       }, 100);
     });
 }
-// Just add to body class '.all-events-disabled' to disable all events
-document.querySelector('.all-events-disabled').style.pointerEvents = 'none';
