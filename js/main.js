@@ -18,6 +18,7 @@ $(document).ready(function() {
         .fadeOut(100);
     }
   });
+  $('.modal').addClass('scroll-y');
   // toggle account dropdown
   $('#toggleHeadDropdown').click(function() {
     $('#headDropdown').slideToggle();
@@ -106,3 +107,5 @@ if (dragContainer) {
       }, 100);
     });
 }
+// Just add to body class '.all-events-disabled' to disable all events
+document.querySelector('.all-events-disabled').style.pointerEvents = 'none';

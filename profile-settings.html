@@ -241,12 +241,12 @@
                           </svg>
                           <span>Log Out</span>
                         </button>
-                        <button class="button redtext">
+                        <a href="#modalDeleteAccount" class="modal-trigger button redtext">
                           <svg class="icon icon-delete">
                             <use xlink:href="img/sprite.svg#icon-delete"></use>
                           </svg>
                           <span>Delete account</span>
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -338,9 +338,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="content__row justify-content-end"><a href="#" class="waves-effect waves-light button button--emptygreen">Edit
+                <div class="content__row justify-content-end"><a href="#modalEditPaymentMethod" class="modal-trigger waves-effect waves-light button button--emptygreen">Edit
                     Payment Method</a></div>
-
               </div>
             </div>
             <!-- Tab 3 -->
@@ -591,6 +590,86 @@
                 <p>Do you want create from template?</p>
                 <a href="#" class="login redtext">Create</a>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="modalDeleteAccount" class="modal">
+    <div class="modal-content">
+      <div class="fm">
+        <span class="btn-close modal-close">
+          <svg class="icon icon-close">
+            <use xlink:href="img/sprite.svg#icon-close"></use>
+          </svg>
+        </span>
+        <div class="fm__contr">
+          <div class="fm__form">
+            <div class="fm__form-inner">
+              <div class="fm__form-header">
+                <h4 class="content-semi-title">Delete your account?</h4>
+              </div>
+              <form>
+                <div class="fm__footer">
+                  <div class="content__row justify-content-center">
+                    <button type="submit" class="button button--red waves-effect waves-light button--confirm">Yes</button>
+                    <button type="button" class="modal-close button button--red waves-effect waves-light button--confirm">No</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="modalEditPaymentMethod" class="modal">
+    <div class="modal-content">
+      <div class="fm">
+        <span class="btn-close modal-close">
+          <svg class="icon icon-close">
+            <use xlink:href="img/sprite.svg#icon-close"></use>
+          </svg>
+        </span>
+        <div class="fm__contr">
+          <div class="fm__form">
+            <div class="fm__form-inner">
+              <div class="fm__form-header">
+                <h4 class="content-semi-title">Edit payment method?</h4>
+              </div>
+              <form>
+                <div class="payment__card">
+                  <div class="card__header">
+                    <p class="card__label">Card number</p>
+                    <div class="card__field">
+                      <span>1247</span>
+                      <span>4854</span>
+                      <span>7438</span>
+                      <span>7439</span>
+                    </div>
+                  </div>
+                  <div class="card__bottom">
+                    <div class="content__row justify-content-between">
+                      <div class="column">
+                        <p class="card__label">Expires</p>
+                        <div class="card__field">11/21</div>
+                      </div>
+                      <div class="column">
+                        <p class="card__label">CVC</p>
+                        <div class="card__field">691</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="fm__footer">
+                  <button type="submit" class="button button--red waves-effect waves-light">Submit</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
