@@ -76,11 +76,33 @@ function moveProgressBar() {
   var progressTotal = getPercent * getProgressWrapWidth;
   $('.progress-bar').width(progressTotal);
 }
-
+// Custom color picker
 var color_picker = document.querySelectorAll('.color-picker');
-color_picker.forEach(function(item, i, arr) {
+color_picker.forEach(function(item) {
   item.parentNode.style.backgroundColor = item.value;
   item.addEventListener('change', function() {
     item.parentNode.style.backgroundColor = item.value;
   });
 });
+
+// Drag and Drop via Dragula https://github.com/bevacqua/dragula
+var dragContainer = document.getElementById('dragContainer');
+if (dragContainer) {
+  dragula([document.getElementById('dragContainer')])
+    .on('drag', function(el) {
+      // add 'is-moving' class to element being dragged
+      el.classList.add('is-moving');
+    })
+    .on('dragend', function(el) {
+      // remove 'is-moving' class from element after dragging has stopped
+      el.classList.remove('is-moving');
+
+      // add the 'is-moved' class for 600ms then remove it
+      window.setTimeout(function() {
+        el.classList.add('is-moved');
+        window.setTimeout(function() {
+          el.classList.remove('is-moved');
+        }, 600);
+      }, 100);
+    });
+}
