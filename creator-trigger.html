@@ -121,35 +121,8 @@
             <div id="creatorSlide1TabImage" class="t-tabs__body">
               <div class="t-tabs__content">
                 <div class="t-filter-bar">
-                  <div class="t-search">
-                    <input type="search" placeholder="Search a free image">
-                    <svg class="t-search-icon icon icon-search">
-                      <use xlink:href="img/sprite.svg#icon-search"></use>
-                    </svg>
-                  </div>
-                  <div class="t-object">
-                    <h3 class="content-small-title">My recent assets</h3>
-                    <div class="t-object__listings">
-                      <div class="t-object__item"><img src="./img/preview-pic.jpg" alt="Oject Image"></div>
-                      <div class="t-object__item"><img src="./img/preview-pic.jpg" alt="Oject Image"></div>
-                      <div class="t-object__item"><img src="./img/preview-pic.jpg" alt="Oject Image"></div>
-                      <div class="t-object__item"><img src="./img/preview-pic.jpg" alt="Oject Image"></div>
-                      <div class="t-object__item"><img src="./img/preview-pic.jpg" alt="Oject Image"></div>
-                      <div class="t-object__item"><img src="./img/preview-pic.jpg" alt="Oject Image"></div>
-                    </div>
-                    <div class="content__row justify-content-end"><button class="t-object__show-all">All assets</button></div>
-                  </div>
-                  <div class="content__row justify-content-center">
-                    <button type="button" class="waves-effect waves-light button button--emptygreen">
-                      <div class="file-field input-field">
-                        <div class="btn">
-                          <span>Upload from
-                            computer</span>
-                          <input type="file">
-                        </div>
-                      </div>
-                    </button>
-                  </div>
+                  <div class="content__row justify-content-center"><a href="#modalSearchMedia" class="modal-trigger button button--red">Search
+                      Image</a></div>
                 </div>
                 <div class="t-view">
                   <div class="t-whitespace">
@@ -440,6 +413,9 @@
             </div>
           </div>
           <aside class="ts-steps">
+            <div class="t-add-slide content__row justify-content-end">
+              <button type="button" class="waves-effect waves-light button button--emptygreen">Add step</button>
+            </div>
             <h5 class="ts-steps__title">Campaign Steps:</h5>
             <ul class="ts-steps__list">
               <li class="is-active">
@@ -456,9 +432,6 @@
               </li>
             </ul>
           </aside>
-        </div>
-        <div class="t-add-slide content__row justify-content-end">
-          <button type="button" class="waves-effect waves-light button button--emptygreen">Add a new slide</button>
         </div>
 
       </div>
@@ -634,6 +607,59 @@
       <button type="submit" class="btn-close modal-close button button--red waves-effect waves-light">Back
         to campaign</button>
       <img src="./img/preview-pic.jpg" alt="Preview picture" class="modal-preview-photo">
+    </div>
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="modalSearchMedia" class="modal">
+    <div class="modal-content">
+      <div class="fm">
+        <div class="fm__contr">
+          <div class="fm__form">
+            <div class="fm__form-inner">
+              <div class="fm__form-header">
+                <h4 class="content-semi-title">Searching Images</h4>
+              </div>
+
+              <div class="t-search">
+                <input type="search" placeholder="Search a free image">
+                <svg class="t-search-icon icon icon-search">
+                  <use xlink:href="img/sprite.svg#icon-search"></use>
+                </svg>
+              </div>
+              <div class="t-object">
+                <h3 class="content-small-title">My recent assets</h3>
+                <div class="t-object__listings">
+                  <div class="t-object__item"><img src="./img/preview-pic.jpg" alt="Oject Image"></div>
+                  <div class="t-object__item"><img src="./img/preview-pic.jpg" alt="Oject Image"></div>
+                  <div class="t-object__item"><img src="./img/preview-pic.jpg" alt="Oject Image"></div>
+                  <div class="t-object__item"><img src="./img/preview-pic.jpg" alt="Oject Image"></div>
+                  <div class="t-object__item"><img src="./img/preview-pic.jpg" alt="Oject Image"></div>
+                  <div class="t-object__item"><img src="./img/preview-pic.jpg" alt="Oject Image"></div>
+                </div>
+                <div class="content__row justify-content-end"><button class="t-object__show-all">All assets</button></div>
+              </div>
+
+              <div class="content__row justify-content-center">
+                <button type="button" class="waves-effect waves-light button button--emptygreen">
+                  <div class="file-field input-field">
+                    <div class="btn">
+                      <span>Upload from
+                        computer</span>
+                      <input type="file">
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="btn-close modal-close">
+          <svg class="icon icon-close">
+            <use xlink:href="img/sprite.svg#icon-close"></use>
+          </svg>
+        </span>
+      </div>
     </div>
   </div>
 

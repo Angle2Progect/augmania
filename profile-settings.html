@@ -642,29 +642,34 @@
               <div class="fm__form-header">
                 <h4 class="content-semi-title">Edit payment method?</h4>
               </div>
-              <form>
-                <div class="payment__card">
-                  <div class="card__header">
-                    <p class="card__label">Card number</p>
-                    <div class="card__field">
-                      <span>1247</span>
-                      <span>4854</span>
-                      <span>7438</span>
-                      <span>7439</span>
+              <form class="edit-credit-form">
+                <div class="form-container">
+                  <div class="payment__card">
+                    <div class="card__header">
+                      <p class="card__label">Card number</p>
+                      <input id="creditNumber" type="text" name="number" placeholder="Type card number here..." />
                     </div>
-                  </div>
-                  <div class="card__bottom">
-                    <div class="content__row justify-content-between">
-                      <div class="column">
-                        <p class="card__label">Expires</p>
-                        <div class="card__field">11/21</div>
-                      </div>
-                      <div class="column">
-                        <p class="card__label">CVC</p>
-                        <div class="card__field">691</div>
+                    <div class="card__body">
+                      <p class="card__label">Cardholder name</p>
+                      <div class="content__row">
+                        <input type="text" name="first-name" placeholder="First Name" />
+                        <input type="text" name="last-name" placeholder="Surname" />
                       </div>
                     </div>
+                    <div class="card__bottom">
+                      <div class="content__row justify-content-between">
+                        <div class="column">
+                          <p class="card__label">Expires</p>
+                          <input type="text" name="expiry" placeholder="MM / YY" />
+                        </div>
+                        <div class="column">
+                          <p class="card__label">CVC</p>
+                          <input type="text" name="cvc" id="creditCVC" placeholder="CCV" />
+                        </div>
+                      </div>
+                    </div>
                   </div>
+                  <div class="card-wrapper"></div>
                 </div>
                 <div class="fm__footer">
                   <button type="submit" class="button button--red waves-effect waves-light">Submit</button>
@@ -680,7 +685,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
-
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/121761/jquery.card.js"></script>
   <script src="js/vendor/materialize.min.js"></script>
   <script src="js/main.js"></script>
 
