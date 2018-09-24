@@ -88,7 +88,6 @@ color_picker.forEach(function(item) {
 var dragContainers = document.querySelectorAll('.dragContainer');
 if (dragContainers.length > 0) {
   let dragContainersArray = Array.from(dragContainers);
-
   dragula(dragContainersArray)
     .on('drag', function(el) {
       // add 'is-moving' class to element being dragged
@@ -194,12 +193,13 @@ window.dragMoveListener = dragMoveListener;
 
 // Credit card validation
 /* Card.js plugin by Jesse Pollak. https://github.com/jessepollak/card */
-
-$('.edit-credit-form').card({
-  container: '.card-wrapper',
-  width: 280,
-
-  formSelectors: {
-    nameInput: 'input[name="first-name"], input[name="last-name"]'
-  }
-});
+var $editCreditCard = $('.edit-credit-form');
+if ($editCreditCard) {
+  $editCreditCard.card({
+    container: '.card-wrapper',
+    width: 280,
+    formSelectors: {
+      nameInput: 'input[name="first-name"], input[name="last-name"]'
+    }
+  });
+}

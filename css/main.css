@@ -2435,6 +2435,9 @@ input[type='color'].color-picker {
 .report__charts .report__card {
   flex-basis: 48%;
 }
+.chart__body svg {
+  max-width: 100%;
+}
 .chart__empty {
   margin-top: 24px;
   display: flex;
@@ -2534,6 +2537,7 @@ input[type='color'].color-picker {
 }
 .date-picker-inputs input {
   max-width: 112px;
+  padding-right: 16px !important;
 }
 .dash {
   width: 12px;
@@ -3453,3 +3457,14 @@ input[type='color'].color-picker {
   opacity: 0.2;
 }
 /* end Dragula */
+/* styles for print */
+@media print {
+  /* здесь будут стили для печати */
+  .sidebar {
+    display: none !important;
+  }
+  .main,
+  .footer {
+    margin-left: 0 !important;
+  }
+}
