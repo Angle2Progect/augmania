@@ -2450,6 +2450,9 @@ input[type='color'].color-picker {
   max-width: 100%;
   margin-bottom: 24px;
 }
+.chart__body .panelBody {
+  padding-top: 32px;
+}
 .report__card .content-small-title {
   margin-bottom: 14px;
 }
@@ -2560,7 +2563,7 @@ input[type='color'].color-picker {
 }
 .main--t {
   margin-top: 64px;
-  padding: 0 0 72px 0;
+  padding: 0 0 32px 0;
 }
 .main--t .main-content {
   margin-top: 64px;
@@ -2692,7 +2695,7 @@ input[type='color'].color-picker {
   opacity: 1;
 }
 .t-slide {
-  margin-bottom: 72px;
+  margin-bottom: 8px;
 }
 .t-step__name {
   padding-left: 25px;
@@ -3409,7 +3412,7 @@ input[type='color'].color-picker {
 }
 
 .resize-drag {
-  /* position: absolute; */
+  position: absolute;
   border-radius: 8px;
   padding: 20px;
   margin: 8px;
@@ -3457,14 +3460,31 @@ input[type='color'].color-picker {
   opacity: 0.2;
 }
 /* end Dragula */
+
 /* styles for print */
 @media print {
-  /* здесь будут стили для печати */
   .sidebar {
     display: none !important;
   }
   .main,
   .footer {
     margin-left: 0 !important;
+  }
+  .summary__item {
+    min-width: 50px;
+  }
+  .report__summary,
+  .report__card {
+    flex-basis: 100%;
+    width: 100%;
+  }
+  .report__card {
+    page-break-inside: avoid;
+  }
+  .report__charts .content__row {
+    display: block;
+  }
+  .chart__body svg {
+    width: 100%;
   }
 }
